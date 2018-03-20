@@ -1,0 +1,404 @@
+/**********************************************************
+***********************************************************
+
+	ResponsiFlex:	A Flexbox Grid Layout
+	
+	Description:	Based on my original Responsif layout,
+						ResponsiFlex takes advantage of modern
+						browsers and the flexbox model to create
+						truly responsive layouts, without hacks.
+	
+	Author:			Lawrie Malen @ Very New Media
+	Author URI:		http://www.verynewmedia.com/
+	
+**********************************************************
+**********************************************************/
+
+/*
+	FIRST THING'S FIRST:
+	
+	This class will give any element all of the flex properties, as 
+	display: flex; doesn't appear to descend.
+*/
+
+.flex {
+	display:									-webkit-box;
+	display:									-ms-flexbox;
+	display:									-webkit-flex;
+	display:									flex;
+}
+
+.flex.columns,
+.boxcontainer.columns {
+	-webkit-box-orient:					vertical;
+	-webkit-box-direction:				normal;
+	-webkit-flex-direction:				column;
+	-ms-flex-direction:					column;
+	flex-direction:						column;
+}
+
+/*
+	REGULAR RESPONSIVE GRID
+*/
+
+.boxcontainer {
+	min-width:								100%;
+	display:									-webkit-box;
+	display:									-ms-flexbox;
+	display:									-webkit-flex;
+	display:									flex;
+	
+	-webkit-box-orient:					horizontal;
+	-webkit-box-direction:				normal;
+	-webkit-flex-direction:				row;
+	-ms-flex-direction:					row;
+	flex-direction:						row;
+	
+	-webkit-flex-wrap:					wrap;
+	-ms-flex-wrap:							wrap;
+	flex-wrap:								wrap;
+	
+	-webkit-box-pack:						start;
+	-webkit-justify-content:			flex-start;
+	-ms-flex-pack:							start;
+	justify-content:						flex-start;
+	
+	-webkit-align-content:				flex-start;
+	-ms-flex-line-pack:					start;
+	align-content:							flex-start;
+	
+	-webkit-box-align:					start;
+	-webkit-align-items:					flex-start;
+	-ms-flex-align:						start;
+	align-items:							flex-start;
+
+	margin-left:							-1.875rem;
+}
+
+.boxcontainer > * {
+	
+}
+
+.boxcontainer > .box:not(.nomargin) {
+	/*margin-top:								0;
+	margin-right:							0;
+	margin-bottom:							0;*/
+	margin-left:							1.875rem;
+}
+
+.boxcontainer > .box.noleftmargin {
+	margin-left:							0;
+}
+
+.boxcontainer.nochildmargins > .box {
+	margin:									0;
+}
+
+/*
+	ALIGNMENT
+	
+	flex-start =	top
+	flex-end = 		bottom
+	center = 		center
+	baseline =		baseline of text
+	stretch = 		stretch to fill (default)
+	
+*/
+
+.boxcontainer.aligntop {
+	-webkit-box-align:					start;
+	-webkit-align-items:					flex-start;
+	-ms-flex-align:						start;
+	align-items:							flex-start;
+}
+
+.boxcontainer.alignmiddle {
+	-webkit-box-align:					center;
+	-webkit-align-items:					center;
+	-ms-flex-align:						center;
+	align-items:							center;
+}
+
+.boxcontainer.alignbottom {
+	-webkit-box-align:					end;
+	-webkit-align-items:					flex-end;
+	-ms-flex-align:						end;
+	align-items:							flex-end;
+}
+
+.boxcontainer.stretchheight {
+	-webkit-box-align:					stretch;
+	-webkit-align-items:					stretch;
+	-ms-flex-align:						stretch;
+	align-items:							stretch;
+}
+
+.boxcontainer.aligncenter {
+	-webkit-box-pack:						center;
+	-webkit-justify-content:			center;
+	-ms-flex-pack:							center;
+	justify-content:						center;
+}
+
+.boxcontainer.alignright {
+	-webkit-box-pack:						end;
+	-webkit-justify-content:			flex-end;
+	-ms-flex-pack:							end;
+	justify-content:						flex-end;
+}
+
+/*
+	BOX SIZES
+*/
+
+.box.one {
+	width:									calc(8.3333% - 1.875rem);
+}
+
+.box.two {
+	width:									calc(16.6667% - 1.875rem);
+}
+
+.box.three {
+	width:									calc(25% - 1.875rem);
+}
+
+.box.four {
+	width:									calc(33.3333% - 1.875rem);
+}
+
+.box.five {
+	width:									calc(41.3337% - 1.875rem);
+}
+
+.box.six {
+	width:									calc(50% - 1.875rem);
+}
+
+.box.seven {
+	width:									calc(58.3333% - 1.875rem);
+}
+
+.box.eight {
+	width:									calc(66.6667% - 1.875rem);
+}
+
+.box.nine {
+	width:									calc(75% - 1.875rem);
+}
+
+.box.ten {
+	width:									calc(83.3333% - 1.875rem);
+}
+
+.box.eleven {
+	width:									calc(91.6667% - 1.875rem);
+}
+
+.box.twelve {
+	width:									100%;
+}
+
+/*
+	FLEX CLASSES
+*/
+
+.flex-grow {
+	-webkit-box-flex:						1;
+	-webkit-flex-grow:					1;
+	-ms-flex-positive:					1;
+	flex-grow:								1;
+}
+
+.flex-noshrink {
+	-webkit-flex-shrink:					0;
+	-ms-flex-negative:					0;
+	flex-shrink:							0;
+}
+
+.flex-stretch {
+	-webkit-box-flex:						1;
+	-webkit-flex:							1;
+	-ms-flex:								1;
+	flex:										1;
+}
+
+.flex-wrap {
+	-webkit-flex-wrap:					wrap;
+	-moz-flex-wrap:						wrap;
+	-ms-flex-wrap:							wrap;
+	flex-wrap:								wrap;
+}
+
+.flex-nowrap {
+	-webkit-flex-wrap:					nowrap;
+	-moz-flex-wrap:						nowrap;
+	-ms-flex-wrap:							nowrap;
+	flex-wrap:								nowrap;
+}
+
+.flex-bottom {
+	-webkit-align-self:					flex-end;
+	-ms-flex-item-align:					end;
+	align-self:								flex-end;
+}
+
+/*
+	JUSTIFIED GRID
+	Initially this adopts the brief properties from the regular .boxcontainer classes
+*/
+
+.boxcontainer.justify {
+	-webkit-box-pack:						justify;
+	-webkit-justify-content:			space-between;
+	-ms-flex-pack:							justify;
+	justify-content:						space-between;
+
+	margin-left:							0;
+}
+
+.boxcontainer.justify > .box {
+	margin-left:							0;
+}
+
+/*
+	NO GUTTER; i.e. NO SPACES BETWEEN BOXES
+*/
+
+.boxcontainer.nogutter {
+	margin-left:							0;
+}
+
+.boxcontainer.nogutter > .box {
+	margin:									0;
+}
+
+.nogutter > .box.one {
+	width:									8.3333%;
+}
+
+.nogutter > .box.two {
+	width:									16.6667%;
+}
+
+.nogutter > .box.three {
+	width:									25%;
+}
+
+.nogutter > .box.four {
+	width:									33.3333%;
+}
+
+.nogutter > .box.five {
+	width:									41.3337%;
+}
+
+.nogutter > .box.six {
+	width:									50%;
+}
+
+.nogutter > .box.seven {
+	width:									58.3333%;
+}
+
+.nogutter > .box.eight {
+	width:									66.6667%;
+}
+
+.nogutter > .box.nine {
+	width:									75%;
+}
+
+.nogutter > .box.ten {
+	width:									83.3333%;
+}
+
+.nogutter > .box.eleven {
+	width:									91.6667%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 767 PIXELS */
+
+@media only screen and (max-width: 48em) {
+	.boxcontainer, 
+	.boxcontainer:not(.mobileretainwidths) > .box.one, 
+	.boxcontainer:not(.mobileretainwidths) > .box.two, 
+	.boxcontainer:not(.mobileretainwidths) > .box.three, 
+	.boxcontainer:not(.mobileretainwidths) > .box.four, 
+	.boxcontainer:not(.mobileretainwidths) > .box.five, 
+	.boxcontainer:not(.mobileretainwidths) > .box.six, 
+	.boxcontainer:not(.mobileretainwidths) > .box.seven, 
+	.boxcontainer:not(.mobileretainwidths) > .box.eight, 
+	.boxcontainer:not(.mobileretainwidths) > .box.nine, 
+	.boxcontainer:not(.mobileretainwidths) > .box.ten, 
+	.boxcontainer:not(.mobileretainwidths) > .box.eleven, 
+	.boxcontainer:not(.mobileretainwidths) > .box.twelve {
+		width:									100%;
+	}
+	
+	.boxcontainer:not(.retainmargins):not(.mobile-boxcontainer),
+	.boxcontainer:not(.retainmargins) > .box {
+		margin-left:							0;
+		margin-right:							0;
+	}
+
+	.boxcontainer.mobile-boxcontainer {
+		width:									calc(100% + 1.875rem);
+	}
+
+	.boxcontainer.mobile-boxcontainer:not(.justify) > .box.mobile-width {
+		margin-left:							1.875rem;
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-one {
+		width:									calc(8.3333% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-two {
+		width:									calc(16.6667% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-three {
+		width:									calc(25% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-four {
+		width:									calc(33.3333% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-five {
+		width:									calc(41.3337% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-six {
+		width:									calc(50% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-seven {
+		width:									calc(58.3333% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-eight {
+		width:									calc(66.6667% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-nine {
+		width:									calc(75% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-ten {
+		width:									calc(83.3333% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobile-width.mobile-eleven {
+		width:									calc(91.6667% - 1.875rem);
+	}
+
+	.boxcontainer > .box.mobilefullwidth {
+		width:									100%;
+	}
+
+	.box img {
+		width:								100%;
+	}
+}

@@ -1,0 +1,1083 @@
+/*
+	TRIGGERS
+*/
+
+.trigger,
+.j-reveal {
+	display:									none;
+}
+
+.trigger + .trigger-reveal,
+.trigger ~ .trigger-reveal {
+	display:									none;
+	opacity:									0;
+
+}
+
+.trigger:checked + .trigger-reveal,
+.trigger:checked ~ .trigger-reveal {
+	display:									block;
+	-webkit-animation:					fadeIn 0.5s ease-out forwards;
+	animation:								fadeIn 0.5s ease-out forwards;
+}
+
+.trigger ~ .triggerdismiss {
+	display:									block;
+}
+
+.trigger:checked ~ .triggerdismiss {
+	display:									none;
+}
+
+/*
+	LISTS
+*/
+
+.nolist {
+	list-style:								none;
+}
+
+/*
+	FONT FAMILIES
+*/
+
+.roboto {
+	font-family:							'Roboto', Helvetica, Arial, sans-serif;
+}
+
+.roboto-slab {
+	font-family:							'Roboto Slab', Helvetica, Arial, sans-serif;
+}
+
+/*
+	FONT SIZES
+*/
+
+.inheritsize {
+	font-size:								inherit;
+}
+
+.size-0750 {
+	font-size: 								0.750rem;
+}
+
+.size-0813 {
+	font-size: 								0.813rem;
+}
+
+.size-0875,
+.small {
+	font-size: 								0.875rem;
+}
+
+.size-0938 {
+	font-size:								0.938rem;
+}
+
+.size-1 {
+	font-size:								1rem;
+}
+
+.size-1063 {
+	font-size: 								1.063rem;
+}
+
+.size-1125 {
+	font-size: 								1.125rem;
+}
+
+.size-1250 {
+	font-size: 								1.250rem;
+}
+
+.size-1313 {
+	font-size: 								1.313rem;
+}
+
+.size-1375 {
+	font-size: 								1.375rem;
+}
+
+.size-1438 {
+	font-size: 								1.438rem;
+}
+
+.size-1500 {
+	font-size: 								1.500rem;
+}
+
+.size-1625 {
+	font-size: 								1.625rem;
+}
+
+.size-1750 {
+	font-size: 								1.750rem;
+}
+
+.size-1813 {
+	font-size: 								1.813rem;
+}
+
+.size-1875 {
+	font-size: 								1.875rem;
+}
+
+.size-1938 {
+	font-size: 								1.938rem;
+}
+
+.size-2 {
+	font-size: 								2rem;
+}
+
+.size-2250 {
+	font-size: 								2.250rem;
+}
+
+.size-2375 {
+	font-size: 								2.375rem;
+}
+
+.size-2500 {
+	font-size: 								2.500rem;
+}
+
+.size-2750 {
+	font-size: 								2.750rem;
+}
+
+.size-3125 {
+	font-size: 								3.125rem;
+}
+
+.size-3625 {
+	font-size:								3.625rem;
+}
+
+/*
+	FONT STYLES
+*/
+
+.uppercase {
+	text-transform:						uppercase;
+}
+
+.light {
+	font-weight:							300;
+}
+
+.normal {
+	font-weight:							400;
+}
+
+.medium {
+	font-weight:							500;
+}
+
+.semibold {
+	font-weight:							600;
+}
+
+.bold {
+	font-weight:							700;
+}
+
+.italic {
+	font-style:								italic;
+}
+
+.nowrap {
+	white-space:							nowrap;
+}
+
+.normalwrap {
+	white-space:							normal;
+}
+
+/*
+	ALIGNMENT
+*/
+
+.clear {
+	clear:									both;
+}
+
+.float-left {
+	float:									left;
+}
+
+.float-right {
+	float:									right;
+}
+
+.alignleft {
+	text-align:								left;
+}
+
+.alignright {
+	text-align:								right;
+}
+
+.aligncenter {
+	text-align:								center;
+}
+
+img.alignleft {
+	float:									left;
+	margin:									0 0.625rem 0.625rem 0;
+}
+
+img.alignright {
+	float:									right;
+	margin:									0 0 0.625rem 0.625rem;
+}
+
+.hidetext {
+	font-size:								0;
+	text-indent:							-999rem;
+	overflow:								hidden;
+}
+
+.lineheight {
+	line-height:							normal;
+}
+
+/*
+	VERTICAL ALIGNMENT
+*/
+
+.aligntop {
+	vertical-align:						top;
+}
+
+.alignbottom {
+	vertical-align:						bottom;
+}
+
+.alignmiddle {
+	vertical-align:						middle;
+}
+
+/*
+	CENTRE VERTICALLY
+*/
+
+.middleparent {
+	display:									-ms-flexbox;
+	display:									-webkit-flex;
+	display:									flex;
+
+	-ms-flex-align:						center;
+	-webkit-align-items:					center;
+	-webkit-box-align:					center;
+
+	align-items:							center;
+}
+
+/*
+	COLOURS
+*/
+
+.bodycolor,
+.bodycolorhover:hover {
+	color:									#666666;
+}
+
+.white,
+.whitehover:hover {
+	color:									#FFFFFF;
+}
+
+.black,
+.blackhover:hover {
+	color:									#000000;
+}
+
+.grey,
+.greyhover:hover {
+	color:									#34495E;
+}
+
+.spotcolor,
+.spotcolorhover:hover {
+	color:									#FF5566;
+}
+
+.secondarycolor,
+.secondarycolorhover:hover {
+	color:									#2EBFF6;
+}
+
+/*
+	BACKGROUNDS
+*/
+
+.whitebg,
+.whitebghover:hover {
+	background-color:						#FFFFFF;
+}
+
+.blackbg,
+.blackbghover:hover {
+	background-color:						#000000;
+}
+
+.greybg,
+.greybghover:hover {
+	background-color:						#34495E;
+}
+
+.spotcolorbg,
+.spotcolorbghover:hover {
+	background-color:						#FF5566;
+}
+
+.secondarycolorbg,
+.secondarycolorbghover:hover {
+	background-color:						#2EBFF6;
+}
+
+.transparentbg,
+.transparentbghover:hover {
+	background-color:						transparent;
+}
+
+/*
+	MARGINS
+*/
+
+.automargin {
+	margin-left:							auto;
+	margin-right:							auto;
+}
+
+.margintop-0625 {
+	margin-top:								0.625rem;
+}
+
+.marginbottom-0625 {
+	margin-bottom:							0.625rem;
+}
+
+.margintop-1 {
+	margin-top:								1rem;
+}
+
+.marginbottom-1 {
+	margin-bottom:							1rem;
+}
+
+.notopmargin {
+	margin-top:								0;
+}
+
+.nobottommargin {
+	margin-bottom:							0;
+}
+
+.noleftmargin {
+	margin-left:							0;
+}
+
+.norightmargin {
+	margin-right:							0;
+}
+
+.nomargin {
+	margin:									0;
+}
+
+.nudgetop-1 {
+	margin-top: 							1rem;
+}
+
+.nudgebottom-1 {
+	margin-bottom: 						1rem;
+}
+
+.nudgetop-1250 {
+	margin-top: 							1.250rem;
+}
+
+.nudgebottom-1250 {
+	margin-bottom: 						1.250rem;
+}
+
+.nudgetop-1500 {
+	margin-top: 							1.500rem;
+}
+
+.nudgebottom-1500 {
+	margin-bottom: 						1.500rem;
+}
+
+.nudgetop-2 {
+	margin-top: 							2rem;
+}
+
+.nudgebottom-2 {
+	margin-bottom: 						2rem;
+}
+
+.nudgetop-2500 {
+	margin-top: 							2.500rem;
+}
+
+.nudgebottom-2500 {
+	margin-bottom: 						2.500rem;
+}
+
+.nudgetop-4375 {
+	margin-top: 							4.375rem;
+}
+
+.nudgebottom-4375 {
+	margin-bottom: 						4.375rem;
+}
+
+/*
+	PADDING
+*/
+
+.padding-1 {
+	padding:									1rem;
+}
+
+.padding-1250 {
+	padding:									1.250rem;
+}
+
+.padding-1500 {
+	padding:									1.500rem;
+}
+
+.padding-2 {
+	padding:									2rem;
+}
+
+.padding-2500 {
+	padding:									2.500rem;
+}
+
+.padding-4 {
+	padding:									4rem;
+}
+
+.topbottompadding {
+	padding-top:							1rem;
+	padding-bottom:						1rem;
+}
+
+.sectionpadding {
+	padding-top:							5rem;
+	padding-bottom:						5rem;
+}
+
+.notoppadding {
+	padding-top:							0 !important;
+}
+
+.nobottompadding {
+	padding-bottom:						0 !important;
+}
+
+.notopbottompadding {
+	padding-top:							0 !important;
+	padding-bottom:						0 !important;
+}
+
+.nosidepadding {
+	padding-left:							0 !important;
+	padding-right:							0 !important;
+}
+
+.nopadding {
+	padding:									0;
+}
+
+/*
+	BORDERS
+*/
+
+.circle {
+	position:								relative;
+	border-radius:							50%;
+	overflow:								hidden;
+	z-index: 								0;			/* Stacking context with relative position stops iOS Safari from screwing up circles with children/borders */
+}
+
+.rounded {
+	border-radius:							0.250rem;
+}
+
+.extra-rounded {
+	border-radius:							0.563rem;
+}
+
+.noborder {
+	border:									none;
+}
+
+.all-borders {
+	border-style:							solid;
+}
+
+.border-top {
+	border-top-style:						solid;
+}
+
+.border-bottom {
+	border-bottom-style:					solid;
+}
+
+.border-left {
+	border-left-style:					solid;
+}
+
+.border-right {
+	border-right-style:					solid;
+}
+
+.border-1 {
+	border-width:							0.063rem;
+}
+
+.border-2 {
+	border-width:							0.125rem;
+}
+
+.border-3 {
+	border-width:							0.188rem;
+}
+
+.border-4 {
+	border-width:							0.250rem;
+}
+
+.border-5 {
+	border-width:							0.313rem;
+}
+
+.whiteborder {
+	border-color:							#FFFFFF;
+}
+
+.greyborder {
+	border-color:							#34495E;
+}
+
+.spotcolorborder {
+	border-color:							#FF5566;
+}
+
+.secondarycolorborder {
+	border-color:							#2EBFF6;
+}
+
+.transparentborder {
+	border-color:							transparent;
+}
+
+.nounderline {
+	text-decoration:						none;
+}
+
+.underline {
+	text-decoration:						underline;
+}
+
+/*
+	DISPLAY
+*/
+
+.inline {
+	display:									inline;
+}
+
+.inlineblock {
+	display:									inline-block;
+}
+
+.block {
+	display:									block;
+}
+
+.hide {
+	display:									none !important;
+}
+
+.fullwidth {
+	width:									100%;
+}
+
+.autowidth {
+	width:									auto;
+}
+
+.fullheight {
+	height:									100%;
+}
+
+.nooverflow {
+	overflow:								hidden;
+}
+
+/*
+	POSITIONS
+*/
+
+.absolute {
+	position:								absolute !important;
+}
+
+.absolutefill {
+	top:										0;
+	left:										0;
+	bottom:									0;
+	right:									0;
+}
+
+.absolutetopleft {
+	top:										0;
+	left:										0;
+}
+
+.relative {
+	position:								relative !important;
+}
+
+.fixed {
+	position:								fixed !important;
+}
+
+/*
+	INTERACTIVITY
+*/
+
+.showhand {
+	cursor:									pointer;
+}
+
+.noclick {
+	pointer-events:						none;
+}
+
+/*
+	TRANSITIONS
+*/
+
+.ease, .ease * {
+	-webkit-transition:					all 0.4s ease;
+	transition:								all 0.4s ease;
+}
+
+.easeout, .easeout * {
+	-webkit-transition:					all 0.4s ease-out;
+	transition:								all 0.4s ease-out;
+}
+
+.easeoutquint, .easeoutquint * {
+	-webkit-transition:					all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+	transition:								all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ease-elastic {
+	-webkit-transition:					all 0.5s cubic-bezier(0, 1.92, 0.43, 0.65);
+	transition:								all 0.5s cubic-bezier(0, 1.92, 0.43, 0.65);
+}
+
+.fastease, .fastease * {
+	-webkit-transition-duration:		0.25s;
+	transition-duration:					0.25s;
+}
+
+.slowease, .slowease * {
+	-webkit-transition-duration:		1s;
+	transition-duration:					1s;
+}
+
+.transformcenter {
+	-webkit-transform-origin:			50%;
+	transform-origin:						50%;
+}
+
+/*
+	NO TRANSITIONS
+*/
+
+.notransition {
+	-webkit-transition:					none !important;
+	transition:								none !important;
+}
+
+/*
+	TRANSITIONS
+	
+   animation-name: none
+   animation-duration: 0s
+   animation-timing-function: ease
+   animation-delay: 0s
+   animation-iteration-count: 1
+   animation-direction: normal
+   animation-fill-mode: none
+   animation-play-state: running
+
+*/
+
+.transparent,
+.invisible {
+	opacity:									0;
+}
+
+.fadeout {
+	-webkit-animation:					fadeOut 1s ease-out forwards;
+	animation:								fadeOut 1s ease-out forwards;
+}
+
+.fadein {
+	-webkit-animation:					fadeIn 1s ease-out forwards;
+	animation:								fadeIn 1s ease-out forwards;
+}
+
+.delay.s025 {
+	-webkit-transition-delay:			0.25s;
+	transition-delay:						0.25s;
+	
+	-webkit-animation-delay:			0.25s;
+	animation-delay:						0.25s;
+}
+
+.delay.s05 {
+	-webkit-transition-delay:			0.5s;
+	transition-delay:						0.5s;
+
+	-webkit-animation-delay:			0.5s;
+	animation-delay:						0.5s;
+}
+
+.delay.s1 {
+	-webkit-transition-delay:			1s;
+	transition-delay:						1s;
+
+	-webkit-animation-delay:			1s;
+	animation-delay:						1s;
+}
+
+/*
+	Fade out and down
+*/
+
+@keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+@-webkit-keyframes fadeOut { 0% { opacity: 1; } 100% { opacity: 0; } }
+
+/*
+	Fade in and up
+*/
+
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@-webkit-keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+/*
+	CUSTOM DROPDOWNS
+*/
+
+.customdropdown {
+	position:								relative;
+}
+
+.customdropdown:after {
+	content:									'';
+	position:								absolute;
+	top:										50%;
+	right:									0;
+	width:									0;
+	height:									0;
+	border-style:							solid;
+	border-width:							0.375rem 0.375rem 0 0.375rem;
+	border-color:							rgba(255, 255, 255, 0.3) transparent transparent transparent;
+	pointer-events:						none;
+}
+
+.customdropdown select {
+	padding-left:							0;
+	padding-right:							1.375rem;
+	outline:									none;
+	-webkit-appearance:					none;
+	-moz-appearance:						none;
+	appearance:								none;
+	outline:									0;
+	box-shadow:								none;
+}
+
+.customdropdown select:invalid:not(:active):not(:focus) {
+	color:									rgba(255, 255, 255, 0.3);
+}
+
+.customdropdown select:invalid:focus {
+	border-color:							#F54F4F;
+}
+
+
+/*
+	ELEMENTS
+*/
+
+::selection {
+	background:								#FF5566;
+	color:									#FFFFFF;
+}
+::-moz-selection {
+	background:								#FF5566;
+	color:									#FFFFFF;
+}
+
+* {
+	-webkit-box-sizing:					border-box;
+	-moz-box-sizing:						border-box;
+	box-sizing:								border-box;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family:							'Roboto Slab', Helvetica, Arial, sans-serif;
+	font-weight:							300;
+	line-height:							1.313;
+}
+
+h3 {
+	font-size:								1.070rem;
+}
+
+a {
+	color:									inherit;
+	-webkit-transition:					all 0.3s linear;
+	-moz-transition:						all 0.3s linear;
+	-o-transition:							all 0.3s linear;
+	transition:								all 0.3s linear;
+}
+
+a:hover {
+	color:									inherit;
+}
+
+b, strong {
+	padding:									0.125rem 0.375rem;
+	font-weight:							400;
+	background-color:						#FF5566;
+	color:									#FFFFFF;
+	border-radius:							0.375rem;
+}
+
+blockquote {
+	margin:									2.250rem 0;
+	padding-left:							2.250rem;
+	border-left:							0.125rem solid #FF5566;
+	font-size:								1.250rem;
+}
+
+hr {
+	width:									100%;
+	border:									none;
+	border-top-width: 					1px;
+	border-top-style:						solid;
+	margin:									3rem 0;
+	color:									rgba(255, 255, 255, 0.5);
+	background-color:						transparent;
+	clear:									both;
+}
+
+code {
+	display:									block;
+	margin:									0;
+	padding:									1rem;
+	background-color:						#34495E;
+	border-radius:							0.375rem;
+}
+
+code.inline {
+	margin:									0;
+	padding:									0.375rem;
+}
+
+iframe {
+	border:									none;
+}
+
+input, 
+textarea, 
+select {
+	display:									block;
+	width:									100%;
+	padding:									0.500rem;
+	border-radius:							0;
+	border:									0.125rem solid rgba(46, 191, 246, 0.3);
+	font-family:							inherit;
+	font-size:								inherit;
+	color:									inherit;
+	-webkit-transition:					all 0.5s ease;
+	transition:								all 0.5s ease;
+	resize:									none;
+	-webkit-appearance:					none;
+}
+
+select,
+select option {
+	-webkit-appearance:					none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	width:									auto;
+}
+
+textarea {
+	height:									7.500rem;
+	margin:									0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline:									none;
+}
+
+::-webkit-input-placeholder {
+	color:									#7E7E7E;
+	opacity:									0.6;
+}
+
+:-ms-input-placeholder {
+	color:									#7E7E7E;
+	opacity:									0.6;
+}
+
+::-moz-placeholder {
+	color:									#7E7E7E;
+	opacity:									0.6;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+	opacity:									0.75;
+	font-style: 							italic;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-` { 
+	-webkit-appearance:					none;
+	margin:									0;
+}
+
+input[type="number"] {
+	-moz-appearance:						textfield;
+}
+
+input.error, textarea.error, select.error {
+	border-color:							#F54F4F;
+}
+
+button, 
+input.button,
+.button {
+	min-width:								6.625rem;
+	padding:									0.625rem 2.250rem;
+	border-radius:							0.375rem;
+	font-family:							inherit;
+	text-align:								center;
+	text-decoration:						none;
+	cursor:									pointer;
+	-webkit-transition:					all 0.2s linear;
+	-moz-transition:						all 0.2s linear;
+	-o-transition:							all 0.2s linear;
+	transition:								all 0.2s linear;
+}
+
+/*	Get rid of weird internal padding in Firefox for buttons */
+
+button::-moz-focus-inner {
+    padding:								0;
+    border:									0;
+}
+
+/*
+	Only kill the border buttons with NO border classes
+*/
+
+button:not([class*="border"]), 
+input.button:not([class*="border"]),
+.button:not([class*="border"]) {
+	border:									none;
+}
+
+button:hover, .button:hover {
+	
+}
+
+a.button {
+	text-decoration:						none;
+}
+
+a.button:not(.block) {
+	display:									inline-block;
+}
+
+button.large-button,
+.button.large-button {
+	min-width:								15.625rem;
+	padding-top:							1.313rem;
+	padding-bottom:						1.313rem;
+	border-radius:							2.250rem;
+}
+
+button.smallbutton,
+.button.smallbutton {
+	min-width:								0;
+	padding:									0.500rem 2.250rem;
+}
+
+button.linkstyle,
+button.linkstyle:hover {
+	padding:									0;
+	border:									none;
+	background-color:						transparent;
+	font-family:							inherit;
+}
+
+button:not(.text-style):disabled,
+button:not(.text-style):disabled:hover,
+input[type="submit"]:disabled,
+input[type="submit"]:disabled:hover,
+.button:not(.text-style).disabled,
+.button:not(.text-style).disabled:hover {
+	background-color:						#CCCCCC;
+	border-color:							#CCCCCC;
+	color:									#FFFFFF;
+	pointer-events:						none;
+}
+
+img {
+	border:									0;
+}
+
+table {
+	width:									100%;
+	padding:									0;
+	border:									none;
+	border-spacing: 						0;
+}
+
+table td {
+	padding:									0;
+	border:									none;
+	border-spacing: 						0;
+}
+
+fieldset {
+	margin:									0;
+	padding:									0;
+	border:									none;
+}
+
+address {
+	font-style: 							normal;
+}

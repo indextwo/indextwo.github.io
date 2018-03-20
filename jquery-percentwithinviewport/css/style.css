@@ -1,0 +1,427 @@
+/*
+	Theme Name: Digi-Link
+	Theme URI: http://www.pixelpudding.com/
+	Description: Theme for Digi-Link
+	Author: Lawrie Malen & Leigh Share @ PixelPudding Ltd
+	Author URI: http://www.pixelpudding.com/
+*/
+
+html {
+	font-family:							'Roboto Slab', Helvetica, Arial, sans-serif;
+	font-size:								1em;
+	font-weight:							400;
+	color:									#FEFEFE;
+	background-color:						#815DFD;
+}
+
+body {
+	margin:									0;
+	padding:									0;
+	background-repeat: 					no-repeat;
+}
+
+html, body {
+	min-height:								100vh;
+	/*-webkit-font-smoothing:				subpixel-antialiased; */
+	-webkit-font-smoothing:				antialiased;
+}
+
+body.nooverflow {
+	overflow:								hidden !important;
+}
+
+/*
+	Icon Fonts
+*/
+
+@font-face {
+	font-family: 'vnmicons';
+  src:										url('fonts/vnmicons.eot?79t1s1');
+  src:										url('fonts/vnmicons.eot?79t1s1#iefix') format('embedded-opentype'),
+    											url('fonts/vnmicons.ttf?79t1s1') format('truetype'),
+    											url('fonts/vnmicons.woff?79t1s1') format('woff'),
+    											url('fonts/vnmicons.svg?79t1s1#vnmicons') format('svg');
+  font-weight:								normal;
+  font-style:								normal;
+
+	/*
+		CSS Usage: content: '\e914' / HTML: &#xe914;
+	*/
+}
+
+[class^="icon-"],
+[class*=" icon-"],
+.socialicons .social-icon {
+	font-family:							'vnmicons' !important;
+	speak:									none;
+	font-style:								normal;
+	font-weight:							normal;
+	font-variant:							normal;
+	text-transform:						none;
+	line-height:							1;
+
+	/* Enable Ligatures */
+	letter-spacing:						0;
+	-webkit-font-feature-settings:	"liga";
+	-moz-font-feature-settings:		"liga=1";
+	-moz-font-feature-settings:		"liga";
+	-ms-font-feature-settings:			"liga" 1;
+	font-feature-settings:				"liga";
+	-webkit-font-variant-ligatures:	discretionary-ligatures;
+	font-variant-ligatures:				discretionary-ligatures;
+
+	/* Better Font Rendering =========== */
+
+	-webkit-font-smoothing:				antialiased;
+	-moz-osx-font-smoothing:			grayscale;
+}
+
+/*
+	SITE WRAPPER
+*/
+
+#sitewrapper {
+	min-height:								100vh;
+	padding-top:							10rem;
+}
+
+#allcontentwrapper {
+	-webkit-box-flex:						1;
+	-webkit-flex:							1 0 auto;
+	-ms-flex:								1 0 auto;
+	flex:										1 0 auto;
+
+	padding:									0 1.250rem;
+	line-height:							1.688;
+}
+
+/*
+	HEADER
+*/
+
+#header {
+	min-height:								5rem;
+	-webkit-box-flex:						0;
+	-webkit-flex:							none;
+	-ms-flex:								none;
+	flex:										none;
+	z-index:									2001;
+}
+
+#header .wrapper {
+	margin-bottom:							0;
+}
+
+#header .navlist li:not(:first-child) {
+	margin-left:							2.500rem;
+}
+
+#header .navlist a {
+	padding:									0.125rem;
+	text-decoration: 						none;
+	opacity:									0.5;
+}
+
+#header .navlist a:hover {
+	opacity:									1;
+}
+
+/*
+	LOGO
+*/
+
+#logo {
+	width:									9rem;
+	margin-top:								3rem;
+	background-image:						url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%2268%22%20height%3D%2272%22%20viewBox%3D%220%200%2068%2072%22%20preserveAspectRatio%3D%22xMinYMin%20meet%22%3E%3Cpath%20fill%3D%22%2395a5a6%22%20d%3D%22M0%2016%20L0%208%20Q0%200%208%200%20L60%200%20Q68%200%2068%208%20L68%2016%200%2016%22%2F%3E%3Cpath%20fill%3D%22%23bdc3c7%22%20d%3D%22M0%2016%20L68%2016%2068%2020%200%2020%200%2016%22%2F%3E%3Cpath%20fill%3D%22%23333333%22%20fill-opacity%3D%220.15%22%20d%3D%22M68%2060.5%20L68%2064%20Q68%2071.5%2061%2072%20L60%2072%208%2072%20Q0%2072%200%2064%20L0%2060.5%20Q0.25%2068%208%2068%20L60%2068%2061%2068%20Q67.75%2067.5%2068%2060.5%22%2F%3E%3Cpath%20fill%3D%22%23ecf0f1%22%20d%3D%22M68%2060.5%20Q67.75%2067.5%2061%2068%20L60%2068%208%2068%20Q0.25%2068%200%2060.5%20L0%2020%2068%2020%2068%2060.5%22%2F%3E%3Cpath%20fill%3D%22%2334495e%22%20d%3D%22M56%2029%20Q60%2029%2060%2033%20L60%2051%20Q60%2055%2056%2055%20L12%2055%20Q8%2055%208%2051%20L8%2033%20Q8%2029%2012%2029%20L56%2029%22%2F%3E%3Cpath%20fill%3D%22%23ff5566%22%20d%3D%22M9%208.5%20Q9%209.55%208.3%2010.3%207.55%2011%206.5%2011%205.45%2011%204.75%2010.3%204%209.55%204%208.5%204%207.45%204.75%206.75%205.45%206%206.5%206%207.55%206%208.3%206.75%209%207.45%209%208.5%20M19.5%2045.75%20L22.45%2048.65%2022.45%2034.85%2019.45%2037.9%2018%2036.45%2022.75%2031.7%2022.9%2031.55%2023.45%2031%2024.1%2031.65%2024.2%2031.7%2024.75%2032.3%2024.95%2032.5%2028.85%2036.45%2027.4%2037.85%2024.45%2034.85%2024.45%2048.65%2027.35%2045.8%2028.75%2047.2%2024.3%2051.65%2024.2%2051.75%2023.45%2052.5%2022.15%2051.2%2021.95%2051%2021.7%2050.75%2018.1%2047.2%2019.5%2045.75%22%2F%3E%3Cpath%20fill%3D%22%23f39c12%22%20d%3D%22M11.75%206.75%20Q12.45%206%2013.5%206%2014.55%206%2015.3%206.75%2016%207.45%2016%208.5%2016%209.55%2015.3%2010.3%2014.55%2011%2013.5%2011%2012.45%2011%2011.75%2010.3%2011%209.55%2011%208.5%2011%207.45%2011.75%206.75%22%2F%3E%3Cpath%20fill%3D%22%232ecc71%22%20d%3D%22M22.3%2010.3%20Q21.55%2011%2020.5%2011%2019.45%2011%2018.75%2010.3%2018%209.55%2018%208.5%2018%207.45%2018.75%206.75%2019.45%206%2020.5%206%2021.55%206%2022.3%206.75%2023%207.45%2023%208.5%2023%209.55%2022.3%2010.3%22%2F%3E%3C%2Fsvg%3E');
+	background-repeat: 					no-repeat;
+	background-size: 						contain;
+	background-position:					50% 50%;
+}
+
+#logo:before {
+	content:									'';
+	display:									block;
+	padding-bottom:						100%;
+}
+
+/*
+	FOOTER
+*/
+
+#footer {
+	padding:									1rem 1.500rem;
+}
+
+#footer .wrapper {
+	margin-bottom:							0;
+}
+
+#footer a {
+	text-decoration: 						none;
+}
+
+/*
+	PAGE CLASSES
+*/
+
+.wrapper {
+	max-width:								60rem;
+	margin:									0 auto 3rem auto;
+}
+
+.percentage-box {
+	margin-bottom:							1rem;
+	padding:									2rem;
+	background-color:						rgba(255, 205, 252, 0.5);
+	border-radius:							1rem;
+	color:									#000000;
+}
+
+/*
+	DOWNLOAD
+*/
+
+.explosion {
+	top:										50%;
+	left:										50%;
+	z-index: 								-1;
+	pointer-events:						none;
+}
+
+.explosion .confetti {
+	width:									0.250rem;
+	height:									0.250rem;
+	-webkit-animation:					reset 3s ease-out infinite;
+	animation:								reset 3s ease-out infinite;
+	-webkit-animation-name:				reset, fade;
+	animation-name:						reset, fade;
+}
+
+@-webkit-keyframes reset {
+	0% { transform: translate(0, 0); }
+}
+
+@keyframes reset {
+	0% { transform: translate(0, 0); }
+}
+
+@-webkit-keyframes fade { to { opacity: 0 } }
+@keyframes fade { to { opacity: 0 } }
+
+/*
+	CONTROL PANEL
+*/
+
+.control-panel {
+	position:								-webkit-sticky;
+	position:								sticky;
+	top:										8.875rem;
+	margin-left:							1.250rem;
+	z-index: 								3002;
+}
+
+.control-panel input.cp-input {
+	display:									inline;
+	width:									auto;
+	max-width:								5rem;
+	padding:									0 0.250rem;
+}
+
+/*
+	OFFSET TESTS
+*/
+
+.offset-top,
+.offset-bottom {
+	opacity:									0.5;
+	z-index: 								2999;
+	pointer-events: 						none;
+}
+
+.offset-bottom {
+	left:										0;
+	bottom:									0;
+}
+
+/*
+	USAGE
+*/
+
+ul.parameter-list li {
+	margin-bottom:							1rem;
+}
+
+/*
+	LOADER
+*/
+
+.loadingblock {
+	background-color:						rgba(0, 0, 0, 0.8);
+	z-index: 								2003;
+}
+
+.loadingblock br {
+	width:									0;
+	height:									0;
+	-ms-flex-preferred-size:			100%;
+	flex-basis:								100%;
+	overflow:								hidden;
+}
+
+.loadingblock .message {
+	
+}
+
+.loadingblock .message:not(:empty) {
+	margin-top:								1rem;
+	padding-top:							1rem;
+}
+
+.loader {
+	/*position:								absolute;
+	top:										50%;
+	left:										50%;*/
+	height:									3.750rem;
+	width:									3.750rem;
+	border-width:							0.375rem;
+	border-style:							solid;
+	border-color:							rgba(255, 255, 255, 0.3);
+	border-radius:							100%;
+	border-top-color: 					rgba(255, 255, 255, 1);
+	-webkit-animation:					rotation 0.6s infinite linear;
+	animation:								rotation 0.6s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+	from {-webkit-transform: rotate(0deg) }
+	to {-webkit-transform: rotate(359deg) }
+}
+
+@keyframes rotation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}
+
+/*
+	CUSTOM INPUTS
+*/
+
+.form-row {
+	margin-bottom:							1rem;
+}
+
+.formfield input[type="checkbox"],
+.form-row label input[type="checkbox"],
+.formfield input[type="radio"] {
+	position:								absolute;
+	clip:										rect(0,0,0,0);
+}
+
+.formfield input[type="checkbox"] + label,
+.form-row label.checkbox .checkbox-internal-label,
+.formfield input[type="radio"] + label {
+	position:								relative;
+	padding-left:							2rem;
+	cursor: 									pointer;
+	opacity:									0.5;
+}
+
+.formfield input[type="checkbox"] + label::before,
+.form-row label.checkbox .checkbox-internal-label:before,
+.formfield input[type="radio"] + label::before {
+	content:									'';
+	position:								absolute;
+	top:										calc(50% - 0.688rem);
+	left:										0;
+	display:									block;
+	width:									1.250rem;
+	height:									1.250rem;
+	border-radius:							0.250rem;
+	background-color:						rgba(255, 255, 255, 0.25);
+}
+
+.formfield input[type="checkbox"] + label::after,
+.form-row label.checkbox input[type="checkbox"] + .checkbox-internal-label:after {
+
+}
+
+.formfield input[type="radio"] + label::after {
+	content:									'';
+	position:								absolute;
+	top:										calc(50% - 0.313rem);
+	left:										0.375rem;
+	width:									0.625rem;
+	height:									0.625rem;
+	background-color:						rgba(255, 255, 255, 0.25);
+}
+
+.formfield input[type="radio"] + label::before,
+.formfield input[type="radio"] + label::after {
+	border-radius:							50%;
+}
+
+.formfield input[type="checkbox"]:checked + label::before,
+.form-row label.checkbox input[type="checkbox"]:checked + .checkbox-internal-label:before,
+.formfield input[type="radio"]:checked + label::before {
+	background-color:						#FFFFFF;
+}
+
+.formfield input[type="checkbox"]:checked + label {
+	opacity:									1;
+}
+
+.formfield input[type="checkbox"]:checked + label::after,
+.form-row label.checkbox input[type="checkbox"]:checked + .checkbox-internal-label:after {
+	content:									'';
+	position:								absolute;
+	top:										0.188rem;
+	left:										0.500rem;
+	width:									0.250rem;
+	height:									0.625rem;
+	border-right:							0.125rem solid #FF5566;
+	border-bottom:							0.125rem solid #FF5566;
+	-webkit-transform:					rotate(45deg);
+	transform:								rotate(45deg);
+}
+
+.formfield input[type="radio"]:checked + label::after {
+	background-color:						#FF5566;
+}
+
+/*
+	NICE LISTS
+*/
+
+.list {
+	margin-top:								0;
+	padding:									0;
+	list-style:								none;
+	/*font-size:								0.875rem;*/
+}
+
+.list li {
+	position:								relative;
+	padding:									0.250rem 0;
+	border-bottom:							1px solid #F3F3F3;
+}
+
+.list li a {
+	display:									block;
+	padding:									0.250rem 0;
+	text-decoration:						none;
+	background-color:						transparent;
+}
+
+.list li a:hover {
+	
+}
+
+/*
+	CONTEXT IMAGES
+*/
+
+img {
+	max-width:								100%;
+	height:									auto;
+}

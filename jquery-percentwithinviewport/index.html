@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<meta name="title" content="Percent Within Viewport: A handy, tiny jQuery plugin to determine how far inside the viewport your elements are." />
+	<meta name="description" content="A handy, tiny jQuery plugin to determine how far inside the viewport your elements are. - By Lawrie Malen at Very New Media&trade;" />
+	
+	<meta property="og:image" content="https://indextwo.github.io/jquery-percentwithinviewport/img/share-image.png" />
+	<meta property="og:description" content="Percent Within Viewport: A handy, tiny jQuery plugin to determine how far inside the viewport your elements are." />
+	<meta property="og:url" content="https://indextwo.github.io/jquery-percentwithinviewport/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_GB" />
+	
+	<meta property="twitter:card" content="gallery" />
+	<meta property="twitter:creator" content="" />
+	<meta property="twitter:description" content="Percent Within Viewport: A handy, tiny jQuery plugin to determine how far inside the viewport your elements are." />
+	<meta property="twitter:site" content="https://indextwo.github.io/jquery-percentwithinviewport/" />
+	<meta property="twitter:image" content="https://indextwo.github.io/jquery-percentwithinviewport/img/share-image.png" />
+	<meta property="twitter:domain" content="https://indextwo.github.io/jquery-percentwithinviewport/" />
+	<meta property="twitter:title" content="Percent Within Viewport" />
+	
+	<title>Percent Within Viewport: A handy, tiny jQuery plugin to determine how far inside the viewport your elements are.</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Roboto+Slab:300" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="css/responsiflex.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/styleelements.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/mobile.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="js/styles/dracula.css" type="text/css" media="screen" />
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116076389-1"></script>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js?ver=2.0.2"></script>
+	<script type="text/javascript" src="js/jquery.vnm.percentWithinViewport.min.js"></script>
+	<script type="text/javascript" src="js/highlight.pack.js"></script>
+	<script type="text/javascript" src="js/init.js"></script>
+	
+</head>
+<body>
+
+<div id="sitewrapper" class="flex columns fullwidth">
+	
+	<div id="header" class="greybg padding-1 fullwidth middleparent absolutetopleft fixed">
+		
+		<input type="checkbox" id="navtrigger" class="trigger" autocomplete="off" />
+		
+		<label for="navtrigger" class="hamburger showforsmall automargin">
+			<span class="hamburger-inner hidetext">Menu</span>
+		</label>
+		
+		<div class="wrapper menu-container">
+			<ul class="boxcontainer navlist nolist nomargin nopadding size-1125 roboto alignmiddle">
+				<li class="box nomargin"><a href="#download">Download</a></li>
+				<li class="box"><a href="#intro">About</a></li>
+				<li class="box"><a href="#examples">Examples</a></li>
+				<li class="box"><a href="#usage">Usage</a></li>
+				
+				<li class="box icon- size-2"><a href="https://github.com" title="GitHub" aria-label="View the GitHub repo for PercentWithinViewport">github</a></li>
+				<li class="box icon- size-2"><a href="https://profiles.wordpress.org/indextwo#content-plugins" target="_blank" title="WordPress Plugins" aria-label="View indextwo's WordPress Plugins in the repository">wordpress-nocircle</a></li>
+				<li class="box icon- size-2"><a href="http://www.verynewmedia.com/" target="_blank" title="Very New Media&trade;" aria-label="Visit Very New Media's website">vnm</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="allcontentwrapper">
+		
+		<div class="intro wrapper aligncenter">
+			<h1 class="nomargin size-3125">Percent Within Viewport</h1>
+			<h2 class="roboto nomargin size-1250">A handy, tiny jQuery plugin to determine how far inside the viewport your elements are.</h2>
+			
+			<div id="logo" class="automargin relative"></div>
+		</div>
+		
+		<div id="download" class="wrapper roboto nudgebuttom-2500 aligncenter relative">
+			
+			<div class="explosion absolute"></div>
+			
+			<a class="button download-button greybg spotcolorbghover" href="https://github.com/indextwo/jquery-percentwithinviewport/archive/master.zip" aria-label="Download PercentWithinViewport on GitHub">Download</a>
+			
+		</div>
+		
+		<div id="intro" class="wrapper roboto nudgebuttom-2500">
+			
+			<p>
+				Sometimes it's super-handy to know just how far inside the viewport your elements are; at least, it was for <strong>me</strong>, and so a plugin was born. 
+			</p>
+			
+			<p>
+				<strong>PercentWithinViewport</strong> is a tiny (640b minified) plugin that you can call just once, or as many times within any event, to find all matching elements within the viewport and 
+				simultaneously grant them a data attribute representing a percentage of far they are inside the viewport; and report back an array of all matching elements that are currently visible. It's as simple as:
+			</p>
+			
+			
+			<pre><code>
+					$('.element').percentWithinViewport();
+			</code></pre>
+			
+			<p>
+				If you want to do something with all of the elements that are visible within the viewport, then just grab that array:
+			</p>
+			
+			<pre><code>
+				var elementsInViewport = $('.element').percentWithinViewport();
+			</code></pre>
+			
+			<p>
+				<strong>PercentWithinViewport</strong> also accepts an object of parameters, including <code class="inline">offsetTop</code>, <code class="inline">offsetBottom</code>, 
+				<code class="inline">offsetTopElement</code> &amp; <code class="inline">offsetBottomElement</code>. This means you can set a fixed offset from either the top or the bottom; 
+				or set a jQuery DOM element for either the top or the bottom (for example, a fixed header or footer) and let the plugin do the rest:
+			</p>
+			
+			<pre><code>
+				var elementsInViewport = $('.element').percentWithinViewport({ 'offsetTopElement': $('#header.fixed') });
+			</code></pre>
+			
+			<hr />
+			
+		</div>
+		
+		<div class="wrapper">
+			
+			<h1 id="examples" class="aligncenter size-3125">
+				Examples
+			</h1>
+			
+			<p class="roboto">
+				Scroll down to see the plugin in action. In this example, <code class="inline">$('.percentage-box').percentWithinViewport();</code> is being called within a 
+				<code class="inline">$(window).scroll()</code> event and updating the elements every time the page is scrolled. Note that, if you don't need to know the figures
+				constantly (or if it's too intensive), I would recommend looking at <a href="https://github.com/ssorallen/jquery-scrollstop" target="_blank">Ross Allen's scrollStop</a> 
+				instead of using the window scroll event.
+			</p>
+			
+			<p class="roboto">
+				The heights of each box are random; refresh the page to change them. Use the handy <strong class="greybg">control panel</strong> to change the plugin options on the fly.
+			</p>
+			
+			<pre><code>
+				$(window).on('scroll', function(e) {
+					var withinViewportArray = $('.percentage-box').percentWithinViewport({'offsetTopElement': $('#header')});
+					
+					$.each(withinViewportArray, function(index) {
+						var myPercVisible = parseInt($(this).attr('data-percent-viewport'));
+						$(this).css({'opacity': myPercVisible / 100});
+						$(this).find('.percentage').text(myPercVisible + '%');
+					});
+				}).trigger('scroll');
+			</code></pre>
+		</div>
+		
+		<div class="examples-wrapper">
+			
+			<div class="control-panel float-left greybg roboto rounded padding-1">
+				
+				<input type="checkbox" id="mobile-cp-trigger" class="trigger" autocomplete="off" />
+				
+				<label for="mobile-cp-trigger" class="showforsmall mobile-cp-label">
+					<span class="hidetext block">Control Panel</span>
+				</label>
+				
+				<h2 class="roboto-slab aligncenter notopmargin">
+					Control Panel
+				</h2>
+				
+				<form class="control-form">
+					<div class="form-row formfield">
+						<input type="checkbox" id="fixedheader" autocomplete="off" checked />
+						<label for="fixedheader">
+							Add <code class="inline spotcolorbg">#header</code> as <code class="inline spotcolorbg">offsetTopElement</code>
+						</label>
+					</div>
+					
+					<div class="form-row formfield">
+						<input type="checkbox" id="offsettop-trigger" autocomplete="off" />
+						<label for="offsettop-trigger">
+							Add <input type="number" id="offsettop" class="cp-input grey" value="0" autocomplete="off" /><code class="inline">px</code> as <code class="inline spotcolorbg">offsetTop</code>
+						</label>
+					</div>
+					
+					<div class="form-row formfield">
+						<input type="checkbox" id="offsetbottom-trigger" autocomplete="off" />
+						<label for="offsetbottom-trigger">
+							Add <input type="number" id="offsetbottom" class="cp-input grey" value="0" autocomplete="off" /><code class="inline">px</code> as <code class="inline spotcolorbg">offsetBottom</code>
+						</label>
+					</div>
+				</form>
+			</div>
+			
+			<div class="wrapper">
+				
+				<div class="offset-top secondarycolorbg fixed absolutetopleft fullwidth ease"></div>
+				<div class="offset-bottom secondarycolorbg fixed fullwidth ease"></div>
+				
+				<div class="percentage-box aligncenter" style="min-height: 29vh;">
+					<h1 class="percentage nomargin"></h1>
+				</div>
+				
+				<div class="percentage-box aligncenter" style="min-height: 81vh;">
+					<h1 class="percentage nomargin"></h1>
+				</div>
+				
+										
+				<div class="percentage-box aligncenter" style="min-height: 57vh;">
+					<h1 class="percentage nomargin"></h1>
+				</div>
+				
+										
+				<div class="percentage-box aligncenter" style="min-height: 64vh;">
+					<h1 class="percentage nomargin"></h1>
+				</div>
+				
+										
+				<div class="percentage-box aligncenter" style="min-height: 48vh;">
+					<h1 class="percentage nomargin"></h1>
+					<h2 class="roboto">All done!</h2>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div id="usage" class="wrapper roboto">
+			
+			<hr />
+			
+			<h1 id="examples" class="aligncenter size-3125">
+				Usage
+			</h1>
+			
+			<p>
+				At a minimum, <strong>PercentWithinViewport</strong> requires jQuery 1.6.0 to be included. 
+			</p>
+			
+			<h3 class="size-2">Example usage</h3>
+			
+			<pre><code>
+				var elementsInViewport = $('.element').percentWithinViewport({
+					'offsetTop': 100,
+					'offsetTopElement': $('#header'),
+					'offsetBottom': 100,
+					'offsetBottomElement': $('#footer')
+				});
+			</code></pre>
+			
+			<h3 class="size-2">Parameters</h3>
+			
+			<ul class="parameter-list">
+				<li>
+					<code class="inline">offsetTop</code> <strong class="size-0875">(int)</strong> The amount of offset, in pixels, from the top of the viewport
+				</li>
+				<li>
+					<code class="inline">offsetTopElement</code> <strong class="size-0875">(jQuery DOM element)</strong> Calculates the <code class="inline">outerHeight()</code> and uses that as the offset 
+					from the top of the viewport. Best used for <code class="inline">fixed</code> elements.
+				</li>
+				<li>
+					<code class="inline">offsetTop</code> <strong class="size-0875">(int)</strong> The amount of offset, in pixels, from the bottom of the viewport.
+				</li>
+				<li>
+					<code class="inline">offsetBottomElement</code> <strong class="size-0875">(jQuery DOM element)</strong> Calculates the <code class="inline">outerHeight()</code> and uses that as the offset 
+					from the bottom of the viewport. Best used for <code class="inline">fixed</code> elements.
+				</li>
+			</ul>
+			
+			<h3 class="size-2">Returns</h3>
+			
+			<p>
+				<strong>(Array)</strong> An array of all matching elements that have more than 0% of themselves within the viewport. Will return an empty array if no elements matching conditions are found.
+			</p>
+			
+			<h3 class="size-2">Notes</h3>
+			
+			<p>
+				The parameters are <strong>cumulative</strong>. So, if you have a header that is <code class="inline">100px</code> in height and set a top offset of <code class="inline">150px</code>, like so:
+			</p>
+			
+			<pre><code>
+				var elementsInViewport = $('.element').percentWithinViewport({
+					'offsetTop': 150,
+					'offsetTopElement': $('#header.height-100')
+				});
+			</code></pre>
+			
+			...then your total offset from the top of the viewport will be <code class="inline spotcolorbg">250px</code>.
+			
+			<hr />
+			
+		</div>
+		
+		<div id="download" class="wrapper roboto nudgebuttom-2500 aligncenter relative">
+			
+			<div class="explosion absolute"></div>
+			
+			<a class="button download-button greybg spotcolorbghover size-2" href="https://github.com/indextwo/jquery-percentwithinviewport/archive/master.zip" aria-label="Download PercentWithinViewport on GitHub">Download</a>
+			
+		</div>
+		
+	</div>
+	
+	<div id="footer" class="roboto size-0875 greybg">
+		<div class="wrapper nobottommargin">
+			<div class="boxcontainer justify">
+				<div class="box">
+					&copy; 2018 indextwo / Lawrie Malen
+				</div>
+				
+				<div class="box">
+					Developed by <a href="http://www.verynewmedia.com/" class="spotcolorhover" target="_blank">Very New Media&trade; <span class="icon- size-1 alignmiddle">vnm</span></a>
+				</div>
+		</div>
+	</div>
+	
+</body>
+</html>
