@@ -79,7 +79,13 @@ body {
 }
 
 #header .navlist {
+	padding-top:							2.500rem;
 	padding-bottom:						1.250rem;
+
+	-webkit-box-pack:						center;
+	-webkit-justify-content:			center;
+	-ms-flex-pack:							center;
+	justify-content:						center;
 }
 
 #header .navlist li:not(:first-child),
@@ -88,6 +94,12 @@ body {
 	margin-left:							0;
 	padding:									0.625rem 0;
 	text-align:								center;
+}
+
+#header .navlist li.box.icon- {
+	width:									auto;
+	padding-left:							0.750rem;
+	padding-right:							0.750rem;
 }
 
 #header .navlist a {
