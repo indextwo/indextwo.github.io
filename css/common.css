@@ -1,0 +1,336 @@
+/*
+	Theme Name: Very New Media: GitHub Common CSS
+	Theme URI: https://indextwo.github.io/
+	Description: Common theme for all indextwo GitHub projects
+	Author: Lawrie Malen @ Very New Media Ltd
+	Author URI: http://www.verynewmedia.com/
+*/
+
+html {
+	font-family:							'Roboto', Helvetica, Arial, sans-serif;
+	font-size:								1em;
+	font-weight:							400;
+}
+
+body {
+	margin:									0;
+	padding:									0;
+	background-repeat: 					no-repeat;
+}
+
+html, body {
+	min-height:								100vh;
+	/*-webkit-font-smoothing:				subpixel-antialiased; */
+	-webkit-font-smoothing:				antialiased;
+}
+
+body.nooverflow {
+	overflow:								hidden !important;
+}
+
+/*
+	Icon Fonts
+*/
+
+@font-face {
+	font-family: 'vnmicons';
+  src:										url('fonts/vnmicons.eot?79t1s1');
+  src:										url('fonts/vnmicons.eot?79t1s1#iefix') format('embedded-opentype'),
+    											url('fonts/vnmicons.ttf?79t1s1') format('truetype'),
+    											url('fonts/vnmicons.woff?79t1s1') format('woff'),
+    											url('fonts/vnmicons.svg?79t1s1#vnmicons') format('svg');
+  font-weight:								normal;
+  font-style:								normal;
+
+	/*
+		CSS Usage: content: '\e914' / HTML: &#xe914;
+	*/
+}
+
+[class^="icon-"],
+[class*=" icon-"],
+.socialicons .social-icon {
+	font-family:							'vnmicons' !important;
+	speak:									none;
+	font-style:								normal;
+	font-weight:							normal;
+	font-variant:							normal;
+	text-transform:						none;
+	line-height:							1;
+
+	/* Enable Ligatures */
+	letter-spacing:						0;
+	-webkit-font-feature-settings:	"liga";
+	-moz-font-feature-settings:		"liga=1";
+	-moz-font-feature-settings:		"liga";
+	-ms-font-feature-settings:			"liga" 1;
+	font-feature-settings:				"liga";
+	-webkit-font-variant-ligatures:	discretionary-ligatures;
+	font-variant-ligatures:				discretionary-ligatures;
+
+	/* Better Font Rendering =========== */
+
+	-webkit-font-smoothing:				antialiased;
+	-moz-osx-font-smoothing:			grayscale;
+}
+
+/*
+	SITE WRAPPER
+*/
+
+#sitewrapper {
+	min-height:								100vh;
+	padding-top:							10rem;
+}
+
+#allcontentwrapper {
+	-webkit-box-flex:						1;
+	-webkit-flex:							1 0 auto;
+	-ms-flex:								1 0 auto;
+	flex:										1 0 auto;
+
+	padding:									0 1.250rem;
+	line-height:							1.688;
+}
+
+/*
+	HEADER
+*/
+
+#header {
+	min-height:								5rem;
+	-webkit-box-flex:						0;
+	-webkit-flex:							none;
+	-ms-flex:								none;
+	flex:										none;
+	z-index:									2001;
+}
+
+#header .wrapper {
+	margin-bottom:							0;
+}
+
+#header .navlist li:not(:first-child) {
+	margin-left:							2.500rem;
+}
+
+#header .navlist a {
+	padding:									0.125rem;
+	text-decoration: 						none;
+	opacity:									0.5;
+}
+
+#header .navlist a:hover {
+	opacity:									1;
+}
+
+/*
+	FOOTER
+*/
+
+/*
+	FOOTER
+*/
+
+#footer {
+	padding:									1rem 1.500rem;
+}
+
+#footer .wrapper {
+	margin-bottom:							0;
+}
+
+#footer a {
+	text-decoration: 						none;
+}
+
+/*
+	PAGE CLASSES
+*/
+
+.wrapper {
+	max-width:								60rem;
+	margin:									0 auto 3rem auto;
+}
+
+/*
+	USAGE
+*/
+
+ul.parameter-list li {
+	margin-bottom:							1rem;
+}
+
+/*
+	LOADER
+*/
+
+.loadingblock {
+	background-color:						rgba(0, 0, 0, 0.8);
+	z-index: 								2003;
+}
+
+.loadingblock br {
+	width:									0;
+	height:									0;
+	-ms-flex-preferred-size:			100%;
+	flex-basis:								100%;
+	overflow:								hidden;
+}
+
+.loadingblock .message {
+	
+}
+
+.loadingblock .message:not(:empty) {
+	margin-top:								1rem;
+	padding-top:							1rem;
+}
+
+.loader {
+	/*position:								absolute;
+	top:										50%;
+	left:										50%;*/
+	height:									3.750rem;
+	width:									3.750rem;
+	border-width:							0.375rem;
+	border-style:							solid;
+	border-color:							rgba(255, 255, 255, 0.3);
+	border-radius:							100%;
+	border-top-color: 					rgba(255, 255, 255, 1);
+	-webkit-animation:					rotation 0.6s infinite linear;
+	animation:								rotation 0.6s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+	from {-webkit-transform: rotate(0deg) }
+	to {-webkit-transform: rotate(359deg) }
+}
+
+@keyframes rotation {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(359deg);}
+}
+
+/*
+	CUSTOM INPUTS
+*/
+
+.form-row {
+	margin-bottom:							1rem;
+}
+
+.formfield input[type="checkbox"],
+.form-row label input[type="checkbox"],
+.formfield input[type="radio"] {
+	position:								absolute;
+	clip:										rect(0,0,0,0);
+}
+
+.formfield input[type="checkbox"] + label,
+.form-row label.checkbox .checkbox-internal-label,
+.formfield input[type="radio"] + label {
+	position:								relative;
+	padding-left:							2rem;
+	cursor: 									pointer;
+	opacity:									0.5;
+}
+
+.formfield input[type="checkbox"] + label::before,
+.form-row label.checkbox .checkbox-internal-label:before,
+.formfield input[type="radio"] + label::before {
+	content:									'';
+	position:								absolute;
+	top:										calc(50% - 0.688rem);
+	left:										0;
+	display:									block;
+	width:									1.250rem;
+	height:									1.250rem;
+	border-radius:							0.250rem;
+	background-color:						rgba(255, 255, 255, 0.25);
+}
+
+.formfield input[type="checkbox"] + label::after,
+.form-row label.checkbox input[type="checkbox"] + .checkbox-internal-label:after {
+
+}
+
+.formfield input[type="radio"] + label::after {
+	content:									'';
+	position:								absolute;
+	top:										calc(50% - 0.313rem);
+	left:										0.375rem;
+	width:									0.625rem;
+	height:									0.625rem;
+	background-color:						rgba(255, 255, 255, 0.25);
+}
+
+.formfield input[type="radio"] + label::before,
+.formfield input[type="radio"] + label::after {
+	border-radius:							50%;
+}
+
+.formfield input[type="checkbox"]:checked + label::before,
+.form-row label.checkbox input[type="checkbox"]:checked + .checkbox-internal-label:before,
+.formfield input[type="radio"]:checked + label::before {
+	background-color:						#FFFFFF;
+}
+
+.formfield input[type="checkbox"]:checked + label {
+	opacity:									1;
+}
+
+.formfield input[type="checkbox"]:checked + label::after,
+.form-row label.checkbox input[type="checkbox"]:checked + .checkbox-internal-label:after {
+	content:									'';
+	position:								absolute;
+	top:										0.188rem;
+	left:										0.500rem;
+	width:									0.250rem;
+	height:									0.625rem;
+	border-right:							0.125rem solid #FF5566;
+	border-bottom:							0.125rem solid #FF5566;
+	-webkit-transform:					rotate(45deg);
+	transform:								rotate(45deg);
+}
+
+.formfield input[type="radio"]:checked + label::after {
+	background-color:						#FF5566;
+}
+
+/*
+	NICE LISTS
+*/
+
+.list {
+	margin-top:								0;
+	padding:									0;
+	list-style:								none;
+	/*font-size:								0.875rem;*/
+}
+
+.list li {
+	position:								relative;
+	padding:									0.250rem 0;
+	border-bottom:							1px solid #F3F3F3;
+}
+
+.list li a {
+	display:									block;
+	padding:									0.250rem 0;
+	text-decoration:						none;
+	background-color:						transparent;
+}
+
+.list li a:hover {
+	
+}
+
+/*
+	CONTEXT IMAGES
+*/
+
+img {
+	max-width:								100%;
+	height:									auto;
+}

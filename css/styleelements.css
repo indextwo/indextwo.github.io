@@ -278,34 +278,14 @@ img.alignright {
 	COLOURS
 */
 
-.bodycolor,
-.bodycolorhover:hover {
-	color:									#666666;
-}
-
 .white,
 .whitehover:hover {
-	color:									#FFFFFF;
+	color:									#FEFEFE;
 }
 
 .black,
 .blackhover:hover {
 	color:									#000000;
-}
-
-.grey,
-.greyhover:hover {
-	color:									#34495E;
-}
-
-.spotcolor,
-.spotcolorhover:hover {
-	color:									#FF5566;
-}
-
-.secondarycolor,
-.secondarycolorhover:hover {
-	color:									#2EBFF6;
 }
 
 /*
@@ -320,21 +300,6 @@ img.alignright {
 .blackbg,
 .blackbghover:hover {
 	background-color:						#000000;
-}
-
-.greybg,
-.greybghover:hover {
-	background-color:						#34495E;
-}
-
-.spotcolorbg,
-.spotcolorbghover:hover {
-	background-color:						#FF5566;
-}
-
-.secondarycolorbg,
-.secondarycolorbghover:hover {
-	background-color:						#2EBFF6;
 }
 
 .transparentbg,
@@ -560,18 +525,6 @@ img.alignright {
 
 .whiteborder {
 	border-color:							#FFFFFF;
-}
-
-.greyborder {
-	border-color:							#34495E;
-}
-
-.spotcolorborder {
-	border-color:							#FF5566;
-}
-
-.secondarycolorborder {
-	border-color:							#2EBFF6;
 }
 
 .transparentborder {
@@ -1021,20 +974,6 @@ a.button:not(.block) {
 	display:									inline-block;
 }
 
-button.large-button,
-.button.large-button {
-	min-width:								15.625rem;
-	padding-top:							1.313rem;
-	padding-bottom:						1.313rem;
-	border-radius:							2.250rem;
-}
-
-button.smallbutton,
-.button.smallbutton {
-	min-width:								0;
-	padding:									0.500rem 2.250rem;
-}
-
 button.linkstyle,
 button.linkstyle:hover {
 	padding:									0;
@@ -1053,6 +992,10 @@ input[type="submit"]:disabled:hover,
 	border-color:							#CCCCCC;
 	color:									#FFFFFF;
 	pointer-events:						none;
+}
+
+p {
+	margin:									1.250rem 0;
 }
 
 img {

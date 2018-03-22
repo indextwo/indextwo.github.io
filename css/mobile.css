@@ -173,6 +173,14 @@ body {
 }
 
 /*
+	SITE WRAPPER
+*/
+
+#sitewrapper {
+	padding-top:							15vh;
+}
+
+/*
 	FOOTER
 */
 

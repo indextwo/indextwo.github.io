@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<meta name="title" content="Confetti Button: Want to add a little razzle-dazzle? Confetti got you covered." />
+	<meta name="description" content="Want to add a little razzle-dazzle? Confetti got you covered. - By Lawrie Malen at Very New Media&trade;" />
+	
+	<meta name="google-analytics-tag" id="analytics-tag" content="UA-116076389-1" />
+	
+	<meta property="og:image" content="https://indextwo.github.io/jquery-confettibutton/img/share-image.png" />
+	<meta property="og:description" content="Confetti Button: Want to add a little razzle-dazzle? Confetti got you covered." />
+	<meta property="og:url" content="https://indextwo.github.io/jquery-confettibutton/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_GB" />
+	
+	<meta property="twitter:card" content="gallery" />
+	<meta property="twitter:creator" content="@indextwo" />
+	<meta property="twitter:description" content="Confetti Button: Want to add a little razzle-dazzle? Confetti got you covered." />
+	<meta property="twitter:site" content="https://indextwo.github.io/jquery-confettibutton/" />
+	<meta property="twitter:image" content="https://indextwo.github.io/jquery-confettibutton/img/share-image.png" />
+	<meta property="twitter:domain" content="https://indextwo.github.io/jquery-confettibutton/" />
+	<meta property="twitter:title" content="Confetti Button" />
+	
+	<title>jQuery Confetti Button: Want to add a little razzle-dazzle? Confetti got you covered.</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Roboto+Slab:300" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="../css/responsiflex.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/styleelements.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/mobile.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../js/styles/dracula.css" type="text/css" media="screen" />
+	
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116076389-1"></script> -->
+	<script async src="https://www.googletagmanager.com/gtag/js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
+	<script src="js/jquery.vnm.confettiButton.min.js"></script>
+	<link rel="stylesheet" href="js/jquery.vnm.confettiButton.css" type="text/css" media="screen" />
+	
+	<script src="../js/highlight.pack.js"></script>
+	<script src="../js/common-init.js"></script>
+	<script src="js/init.js"></script>
+	
+</head>
+<body>
+
+<div id="sitewrapper" class="flex columns fullwidth">
+	
+	<div id="header" class="greybg padding-1 fullwidth middleparent absolutetopleft fixed">
+		
+		<input type="checkbox" id="navtrigger" class="trigger" autocomplete="off" />
+		
+		<label for="navtrigger" class="hamburger showforsmall automargin">
+			<span class="hamburger-inner hidetext">Menu</span>
+		</label>
+		
+		<div class="wrapper menu-container">
+			<ul class="boxcontainer navlist nolist nomargin nopadding size-1125 alignmiddle">
+				<li class="box nomargin"><a href="#download">Download</a></li>
+				<li class="box"><a href="#intro">About</a></li>
+				<li class="box"><a href="#examples">Examples</a></li>
+				<li class="box"><a href="#usage">Usage</a></li>
+				
+				<li class="box icon- size-2"><a href="https://github.com" title="GitHub" aria-label="View the GitHub repo for Confetti Button">github</a></li>
+				<li class="box icon- size-2"><a href="https://profiles.wordpress.org/indextwo#content-plugins" target="_blank" title="WordPress Plugins" aria-label="View indextwo's WordPress Plugins in the repository">wordpress-nocircle</a></li>
+				<li class="box icon- size-2"><a href="http://www.verynewmedia.com/" target="_blank" title="Very New Media&trade;" aria-label="Visit Very New Media's website">vnm</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="allcontentwrapper">
+		
+		<div class="intro wrapper aligncenter">
+			<h1 class="nomargin size-3125">jQuery Confetti Button!</h1>
+			<h2 class="roboto nomargin size-1250">Want to add a little razzle-dazzle? Confetti got you covered.</h2>
+			
+			<div id="logo" class="automargin relative"></div>
+		</div>
+		
+		<div id="download" class="wrapper nudgebottom-2500 aligncenter relative">
+			
+			<a class="button download-button greybg spotcolorbghover" href="https://github.com/indextwo/jquery-confettibutton/archive/master.zip" data-button-location="top" aria-label="Download Confetti Button on GitHub">Download</a>
+			
+		</div>
+		
+		<div id="intro" class="wrapper nudgebottom-2500">
+			
+			<p>
+				Ever wanted to add some luminosity to your links? Brashness to your buttons? <strong>Clinquant</strong> to your CTA? Or some glitz &amp; glamour to anything else, for that matter? Then you need to get you some 
+				<strong>CONFETTI</strong>.
+			</p>
+			
+			<p>
+				<strong>Confetti Button</strong> is a teeny little (1.02kb minified) plugin that you can call against any DOM element (although smaller things like buttons &amp; image containers tend to work best) to instantly add a fizzy flume of 
+				confetti. It's as simple as:
+			</p>
+			
+			<pre><code>
+				$('.button').confettiButton();
+			</code></pre>
+			
+			<p>
+				Does it have to be a button though? <strong>NOPE</strong>. It can be applied to any DOM element that is a <strong>containing element</strong>; so you can use it on a <code class="inline">button</code>, <code class="inline">div</code>, 
+				<code class="inline">a</code>, <code class="inline">label</code> or anything else that can contain other elements. The only things you can't immediately use it on (without some extra markup, at least) are non-containing or 
+				<strong>self-closing</strong> elements. These include <code class="inline">img</code>, <code class="inline">input</code>, <code class="inline">hr</code>, <code class="inline">br</code> and <code class="inline">embed</code>.
+			</p>
+			
+			<p>
+				If you want to use <strong>Confetti Button</strong> on a self-closing element, I recommend wrapping it in a containing element (like a <code class="inline">div</code>) and applying <code class="inline">$.confettiButton</code> to that.
+			</p>
+			
+			<p>
+				<strong>Confetti Button</strong> also accepts an object of optional parameters for controlling the amount of confetti, the colours, the scale, the amount of distance to cover, the speed, rotation and whether to only appear on hover. 
+				For example:
+			</p>
+			
+			<pre><code>
+				$('.button').confettiButton({
+					num: 120,
+					colorArray: ['#BDC3C7', '#2C3E50'],
+					speed: 2,
+					maxX: 300,
+					maxY: 300
+				});
+			</code></pre>
+			
+			Results in:
+			
+			<div class="wrapper nudgebottom-2500 aligncenter relative">
+				<a class="button demo-button-1 greybg spotcolorbghover" href="#examples">Take a look at some examples!</a>
+			</div>
+			
+			<hr />
+			
+		</div>
+		
+		<div class="wrapper">
+			
+			<h1 id="examples" class="aligncenter size-3125">
+				Examples
+			</h1>
+			
+			<p>
+				Below are some handy examples of the plugin in action. As mentioned, you don't have to use <strong>Confetti Button</strong> on <u>just</u> buttons (as you can see below) - you can use it on any containing element to instantly get a neat 
+				confetti effect. 
+			</p>
+			
+			<div class="nudgebottom-2500 aligncenter relative">
+				<a class="button hover-button greybg spotcolorbghover" href="javascript:void(0);">Confetti only on hover</a>
+			</div>
+			
+			<pre><code>
+				$('.button').confettiButton({
+					hoverOnly: true
+				});
+			</code></pre>
+			
+			<hr />
+			
+			<div class="nudgebottom-2500 aligncenter relative">
+				<a class="button green-button greybg spotcolorbghover" href="javascript:void(0);">Only green confetti</a>
+				<a class="button rgba-button greybg spotcolorbghover" href="javascript:void(0);">Alternate semi-opaque black &amp; white confetti</a>
+			</div>
+			
+			<pre><code>
+				$('.green-button').confettiButton({
+					colorArray: ['#2ECC71'],
+				});
+				
+				$('.rgba-button').confettiButton({
+					colorArray: ['rgba(0, 0, 0, 0.3)', 'rgba(255, 255, 255, 0.3)'],
+				});
+			</code></pre>
+			
+			The <code class="inline">colorArray</code> parameter will accept any valid CSS <code class="inline">background-color</code> values, including RGBA.
+			
+			<hr />
+			
+			<div class="nudgebottom-2500 aligncenter relative">
+				<a class="button large-button greybg spotcolorbghover" href="javascript:void(0);">LARGE CONFETTI ONLY</a>
+				<a class="button slow-button greybg spotcolorbghover" href="javascript:void(0);">Sloooooow confetti</a>
+			</div>
+			
+			<pre><code>
+				$('.large-button').confettiButton({
+					minScale: 200,
+					maxScale: 400
+				});
+				
+				$('.slow-button').confettiButton({
+					speed: 6
+				});
+			</code></pre>
+			
+			<hr />
+			
+			<h3 class="aligncenter size-2">
+				On a <code class="inline">div</code> with a background image
+			</h3>
+			
+			<div class="logo automargin relative"></div>
+		</div>
+		
+		<div id="usage" class="wrapper">
+			
+			<hr />
+			
+			<h1 class="aligncenter size-3125">
+				Usage
+			</h1>
+			
+			<p>
+				At a minimum, <strong>Confetti Button</strong> requires jQuery 1.6.0 to be included, and the accompanying CSS stylesheet to be included within your page:
+			</p>
+			
+			<pre><code>
+				&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"&gt;&lt;/script&gt;
+				&lt;script src="jquery.vnm.confettiButton.min.js"&gt;&lt;/script&gt;
+				&lt;link rel="stylesheet" href="jquery.vnm.confettiButton.css" type="text/css" media="screen" /&gt;
+			</code></pre>
+			
+			<p>
+				The CSS defines the basics of the confetti and the transitions. It can be modified to adjust the default size &amp; shape of the confetti, position of the container, etc.
+			</p>
+			
+			<hr />
+			
+			<h3 class="size-2">Parameters</h3>
+			
+			<ul class="parameter-list">
+				<li>
+					<code class="inline">num</code> <strong class="size-0875">(int)</strong> The number of confetti bits to generate. Defaults to <code class="inline">60</code>.
+				</li>
+				<li>
+					<code class="inline">colorArray</code> <strong class="size-0875">(array)</strong> Array of <code class="inline">background-color</code> values to use. Accepts any CSS-valid value, and they can be mixed. 
+					Defaults to <code class="inline">['#FF5566', '#FFFFFF', '#F1C40F', '#2EBFF6', '#2ECC71']</code>.
+				</li>
+				<li>
+					<code class="inline">minX</code> <strong class="size-0875">(int)</strong> The minimum distance, in pixels, of travel on the x-axis for any piece of confetti. As long as this value resolves to a real number 
+					(e.g. <code class="inline">$('.element').offset().top</code>), it will be accepted. Defaults to <code class="inline">5</code>.
+				</li>
+				<li>
+					<code class="inline">minY</code> <strong class="size-0875">(int)</strong> The minimum distance, in pixels, of travel on the y-axis for any piece of confetti. As long as this value resolves to a real number, 
+					it will  be accepted. Defaults to <code class="inline">5</code>.
+				</li>
+				<li>
+					<code class="inline">maxX</code> <strong class="size-0875">(int)</strong> The maximum distance, in pixels, of travel on the x-axis for any piece of confetti. As long as this value resolves to a real number, 
+					it will be accepted. Defaults to <code class="inline">120</code>.
+				</li>
+				<li>
+					<code class="inline">maxY</code> <strong class="size-0875">(int)</strong> The maxmimum distance, in pixels, of travel on the y-axis for any piece of confetti. As long as this value resolves to a real number, 
+					it will  be accepted. Defaults to <code class="inline">120</code>.
+				</li>
+				<li>
+					<code class="inline">speed</code> <strong class="size-0875">(float)</strong> The base speed of travel for confetti. The speed of any individual piece is calculated randomly with this value as a basis; so, the 
+					higher the number, the slower the rate of travel. Defaults to <code class="inline">1</code>.
+				</li>
+				<li>
+					<code class="inline">rotation</code> <strong class="size-0875">(bool)</strong> Whether the pieces will be randomly rotated. Assuming they are square, the rotation is anywhere from 0-90&deg;. Defaults to 
+					<code class="inline">true</code>.
+				</li>
+				<li>
+					<code class="inline">hoverOnly</code> <strong class="size-0875">(bool)</strong> Whether the confetti will only appear on a <code class="inline">hover</code> event. Defaults to <code class="inline">false</code>. 
+					(This interaction can always be controlled manually, if you want to get your hands dirty with the CSS)
+				</li>
+			</ul>
+			
+			<hr />
+			
+			<h3 class="size-2">Notes</h3>
+			
+			<p>
+				As <strong>Confetti Button</strong> is predominantly CSS-based, you can control a lot of how it works simply by modifying the CSS. For example, by default the confetti bits are square. To make them round, you just add:
+			</p>
+			
+			<pre><code>
+				.vnm-confetti .confetto {
+					border-radius: 50%;
+				}
+			</code></pre>
+			
+			You can also easily adjust the base size; change colour on hover events; change the position of the container so that it plumes out of the top of the element instead of the middle... experiment with it and see what you can 
+			come up with!
+			
+			<hr />
+			
+		</div>
+		
+		<div class="wrapper nudgebottom-2500 aligncenter relative">
+			
+			<a class="button download-button greybg spotcolorbghover size-2" href="https://github.com/indextwo/jquery-confettibutton/archive/master.zip" data-button-location="bottom" aria-label="Download Confetti Button on GitHub">Download</a>
+			
+		</div>
+		
+	</div>
+	
+	<div id="footer" class="size-0875 greybg">
+		<div class="wrapper nobottommargin">
+			<div class="boxcontainer justify">
+				<div class="box">
+					&copy; 2018 indextwo / Lawrie Malen
+				</div>
+				
+				<div class="box">
+					Developed by <a href="http://www.verynewmedia.com/" class="spotcolorhover" target="_blank">Very New Media&trade; <span class="icon- size-1 alignmiddle">vnm</span></a>
+				</div>
+		</div>
+	</div>
+	
+</body>
+</html>
