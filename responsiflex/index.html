@@ -37,8 +37,6 @@
 	<link rel="stylesheet" href="../css/mobile.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="../js/styles/dracula.css" type="text/css" media="screen" />
 	
-	<link rel="stylesheet" href="css/flags.css" type="text/css" media="screen" />
-	
 	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116076389-1"></script> -->
 	<script async src="https://www.googletagmanager.com/gtag/js"></script>
 	
@@ -97,6 +95,13 @@
 			<p>
 				<strong>ResponsiFlex</strong> is a CSS framework that takes advantage of modern browsers and the Flexbox model to create truly responsive layouts, without hacks. No floats, no <code class="inline">inline-block</code>s - just intuitive, 
 				responsive, fluid layouts.
+			</p>
+			
+			<p>
+				It's is based on the standard 12-column grid, with some extra flavour thrown in. Each <code class="inline">.boxcontainer</code> is 100% of its parent's width, and each of its child <code class="inline">.box</code> elements 
+				can be set to a desired width with a simple named class: <code class="inline">.box.six`</code> makes the box half the width of its boxcontainer as it takes up six columns; <code class="inline">.box.one</code> is 1/12th the width, 
+				because it's one column. There are also special <code class="inline">.box.tenths</code> class for 10%-width &amp; <code class="inline">.box.fifths</code> for 20% (as they don't fit neatly into a 12-column grid, but you may find you want 
+				them more often than you realise).
 			</p>
 			
 			<p>
@@ -475,7 +480,7 @@
 				
 				<li>
 					<code class="inline">.boxcontainer.nogutter</code>: By default there is a set gutter between each box (and the boxcontainer has a negative margin to account for that). <code class="inline">.nogutter</code> 
-					Removs any margins so all direct child items butt up to each other.
+					Removes any margins so all direct child items butt up to each other.
 				</li>
 				
 				<li>
