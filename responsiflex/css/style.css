@@ -1,0 +1,118 @@
+/*
+	Theme Name: TinyFlags
+	Theme URI: https://indextwo.github.io/jquery-confettibutton/
+	Description: Theme for VNM Tiny Flag Icons
+	Author: Lawrie Malen @ Very New Media Ltd
+	Author URI: http://www.verynewmedia.com/
+*/
+
+html {
+	color:									#FEFEFE;
+	background-color:						#34495E;
+}
+
+/*
+	LOGO
+*/
+
+.mobile-nudgebottom-5 {
+	margin-bottom:							5rem;
+}
+
+/*
+	RESPONSIFLEX CLASSES
+*/
+
+.example-wrapper {
+	background-color:						#233241;
+}
+
+.example-wrapper .boxcontainer > .box:not(.spotcolorbg):not(.secondarycolorbg):not(.greybg) {
+	background-color:						#374E64;
+}
+
+.example-wrapper:not(.nopadding),
+.example-wrapper .boxcontainer > .box {
+	padding:									1rem;
+}
+
+/*
+	LISTS
+*/
+
+.parameter-list {
+	list-style:								none;
+}
+
+.parameter-list li {
+	padding:									0.625rem;
+	border-bottom:							1px solid rgba(255, 255, 255, 0.5);
+}
+
+/*
+	COLORS
+*/
+
+.grey,
+.greyhover:hover {
+	color:									#2C3E50;
+}
+
+.spotcolor,
+.spotcolorhover:hover {
+	color:									#2980B9;
+}
+
+.secondarycolor,
+.secondarycolorhover:hover {
+	color:									#8E44AD;
+}
+
+.greybg,
+.greybghover:hover {
+	background-color:						#2C3E50;
+}
+
+.spotcolorbg,
+.spotcolorbghover:hover {
+	background-color:						#2980B9;
+}
+
+.secondarycolorbg,
+.secondarycolorbghover:hover {
+	background-color:						#8E44AD;
+}
+
+.greyborder {
+	border-color:							#2C3E50;
+}
+
+.spotcolorborder {
+	border-color:							#2980B9;
+}
+
+.secondarycolorborder {
+	border-color:							#8E44AD;
+}
+
+/*
+	ELEMENTS
+*/
+
+::selection {
+	background:								#2980B9;
+	color:									#FFFFFF;
+}
+::-moz-selection {
+	background:								#2980B9;
+	color:									#FFFFFF;
+}
+
+b, strong {
+	background-color:						#2C3E50;
+	color:									#FFFFFF;
+}
+
+code {
+	background-color:						#2C3E50;
+}

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-GB" prefix="og: http://ogp.me/ns#">
+
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<meta name="title" content="ResponsiFlex: A Flexbox-based CSS framework" />
+	<meta name="description" content="ResponsiFlex: A Flexbox-based CSS framework - By Lawrie Malen at Very New Media&trade;" />
+	
+	<meta name="google-analytics-tag" id="analytics-tag" content="UA-116076389-1" />
+	
+	<meta property="og:image" content="https://indextwo.github.io/responsiflex/img/share-image.png" />
+	<meta property="og:description" content="ResponsiFlex: A Flexbox-based CSS framework." />
+	<meta property="og:url" content="https://indextwo.github.io/responsiflex/" />
+	<meta property="og:type" content="website" />
+	<meta property="og:locale" content="en_GB" />
+	
+	<meta property="twitter:card" content="gallery" />
+	<meta property="twitter:creator" content="@indextwo" />
+	<meta property="twitter:description" content="ResponsiFlex: A Flexbox-based CSS framework" />
+	<meta property="twitter:site" content="https://indextwo.github.io/responsiflex/" />
+	<meta property="twitter:image" content="https://indextwo.github.io/responsiflex/img/share-image.png" />
+	<meta property="twitter:domain" content="https://indextwo.github.io/responsiflex/" />
+	<meta property="twitter:title" content="ResponsiFlex" />
+	
+	<title>ResponsiFlex: A Flexbox-based CSS framework.</title>
+	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400|Roboto+Slab:300" rel="stylesheet" />
+	
+	<link rel="stylesheet" href="../css/responsiflex.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/styleelements.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../css/mobile.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../js/styles/dracula.css" type="text/css" media="screen" />
+	
+	<link rel="stylesheet" href="css/flags.css" type="text/css" media="screen" />
+	
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116076389-1"></script> -->
+	<script async src="https://www.googletagmanager.com/gtag/js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
+	<script src="../js/jquery.vnm.confettiButton.min.js"></script>
+	<link rel="stylesheet" href="../js/jquery.vnm.confettiButton.css" type="text/css" media="screen" />
+	
+	<script src="../js/highlight.pack.js"></script>
+	<script src="../js/common-init.js"></script>
+	<script src="js/init.js"></script>
+	
+</head>
+<body>
+
+<div id="sitewrapper" class="flex columns fullwidth">
+	
+	<div id="header" class="greybg padding-1 fullwidth middleparent absolutetopleft fixed">
+		
+		<input type="checkbox" id="navtrigger" class="trigger" autocomplete="off" />
+		
+		<label for="navtrigger" class="hamburger showforsmall automargin">
+			<span class="hamburger-inner hidetext">Menu</span>
+		</label>
+		
+		<div class="wrapper menu-container">
+			<ul class="boxcontainer navlist nolist nomargin nopadding size-1125 alignmiddle">
+				<li class="box nomargin"><a href="#download">Download</a></li>
+				<li class="box"><a href="#intro">About</a></li>
+				<li class="box"><a href="#examples">Examples</a></li>
+				<li class="box"><a href="#classes">Classes</a></li>
+				<li class="box"><a href="#notes">Notes</a></li>
+				
+				<li class="box icon- size-2"><a href="https://github.com/indextwo/responsiflex/" title="GitHub" aria-label="View the GitHub repo for ResponsiFlex">github</a></li>
+				<li class="box icon- size-2"><a href="https://profiles.wordpress.org/indextwo#content-plugins" target="_blank" title="WordPress Plugins" aria-label="View indextwo's WordPress Plugins in the repository">wordpress-nocircle</a></li>
+				<li class="box icon- size-2"><a href="http://www.verynewmedia.com/" target="_blank" title="Very New Media&trade;" aria-label="Visit Very New Media's website">vnm</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="allcontentwrapper">
+		
+		<div class="intro wrapper aligncenter">
+			<h1 class="nomargin size-3125">ResponsiFlex</h1>
+			<h2 class="roboto nomargin size-1250">A Flexbox-based CSS framework.</h2>
+		</div>
+		
+		<div id="download" class="wrapper nudgebottom-2500 aligncenter relative">
+			
+			<a class="button download-button spotcolorbg greybghover" href="https://github.com/indextwo/responsiflex/archive/master.zip" data-button-location="top" aria-label="Download ResponsiFlex on GitHub">Download ResponsiFlex</a>
+			
+		</div>
+		
+		<div id="intro" class="wrapper nudgebottom-2500">
+			
+			<p>
+				<strong>ResponsiFlex</strong> is a CSS framework that takes advantage of modern browsers and the Flexbox model to create truly responsive layouts, without hacks. No floats, no <code class="inline">inline-block</code>s - just intuitive, 
+				responsive, fluid layouts.
+			</p>
+			
+			<p>
+				The commented &amp; tabbed ResponsiFlex stylesheet is just 10.2kb, or 6.54kb minified. It is released under the GNU General Public License.
+			</p>
+			
+			<hr />
+			
+		</div>
+		
+		<div id="examples" class="wrapper">
+			
+			<h1 class="aligncenter size-3125">
+				Examples
+			</h1>
+			
+			<p>
+				Below are some examples of how to use ResponsiFlex to get the most out of it. Note that some padding has been added just to make everything nice and clear.
+			</p>
+			
+			<h3 class="aligncenter size-2">
+				Basic 2-column layout
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer"&gt;
+					&lt;div class="box six"&gt;
+						I am a half-width box.
+					&lt;/div&gt;
+					
+					&lt;div class="box six"&gt;
+						&amp;larr;- I'm with stupid.
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer">
+					<div class="box six">
+						I am a half-width box.
+					</div>
+					
+					<div class="box six">
+						&larr; I'm with stupid.
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				Nifty 3-column layout
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer"&gt;
+					&lt;div class="box five"&gt;
+						I'm with stupid &amp;rarr;
+					&lt;/div&gt;
+					
+					&lt;div class="box three"&gt;
+						I'm stupid?
+					&lt;/div&gt;
+					
+					&lt;div class="box four"&gt;
+						&amp;larr; I don't know either of these guys
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer">
+					<div class="box five">
+						I'm with stupid &rarr;
+					</div>
+					
+					<div class="box three">
+						I'm stupid?
+					</div>
+					
+					<div class="box four">
+						&larr; I don't know either of these guys
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				Centrally-aligned boxes
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer aligncenter"&gt;
+					&lt;div class="box five"&gt;
+						I'm in the centre!
+					&lt;/div&gt;
+					
+					&lt;div class="box three"&gt;
+						...budge over, dude.
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer aligncenter">
+					<div class="box five textalignleft">
+						I'm in the centre!
+					</div>
+					
+					<div class="box three textalignleft">
+						...budge over, dude.
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				Right-aligned boxes
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer alignright"&gt;
+					&lt;div class="box six"&gt;
+						Let's go over here!
+					&lt;/div&gt;
+					
+					&lt;div class="box two"&gt;
+						Give me some space to breathe!
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer alignright">
+					<div class="box six textalignleft">
+						Let's go over here!
+					</div>
+					
+					<div class="box two textalignleft">
+						Give me some space to breathe!
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				Justified boxes
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer justify"&gt;
+					&lt;div class="box two"&gt;
+						Echo!
+					&lt;/div&gt;
+					
+					&lt;div class="box two"&gt;
+						...echo...
+					&lt;/div&gt;
+					
+					&lt;div class="box two"&gt;
+						...echo...
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer justify">
+					<div class="box two">
+						<span class="size-2">Echo!</span>
+					</div>
+					
+					<div class="box two">
+						...echo...
+					</div>
+					
+					<div class="box two">
+						<span class="size-0750">...echo...</span>
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				Vertically-centred right-aligned boxes with no gutters
+			</h3>
+			
+			<p>
+				Now we've covered the basics, let's make it a bit more interesting:
+			</p>
+			
+			<pre><code>
+				&lt;div class="boxcontainer alignright alignmiddle nogutter"&gt;
+					&lt;div class="box six"&gt;
+						My direct classes haven't changed AT ALL!
+					&lt;/div&gt;
+					
+					&lt;div class="box two"&gt;
+						Neither have mine, but you don't hear me bragging about it.
+					&lt;/div&gt;
+					
+					&lt;div class="box four"&gt;
+						Will you two PIPE DOWN?!
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer alignright alignmiddle nogutter">
+					<div class="box six spotcolorbg textalignleft">
+						My direct classes haven't changed AT ALL!
+					</div>
+					
+					<div class="box two secondarycolorbg textalignleft">
+						Neither have mine, but you don't hear me bragging about it.
+					</div>
+					
+					<div class="box two textalignleft">
+						Will you two PIPE DOWN?!
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				One defined-width box &amp; one to take up the rest
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer"&gt;
+					&lt;div class="box four"&gt;
+						One box to bind them...
+					&lt;/div&gt;
+					
+					&lt;div class="box flex-stretch"&gt;
+						AND ONE BOX TO RULE THEM ALL
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer">
+					<div class="box four">
+						One box to bind them...
+					</div>
+					
+					<div class="box flex-stretch">
+						AND ONE BOX TO RULE THEM ALL
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				Boxes with child Flexbox containers
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer"&gt;
+					&lt;div class="box eight"&gt;
+						&lt;div class="boxcontainer"&gt;
+							&lt;div class="box six"&gt;
+								Boxes in boxes...
+							&lt;/div&gt;
+							
+							&lt;div class="box six"&gt;
+								...in boxes in boxes...
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer stretchheight">
+					<div class="box eight spotcolorbg">
+						<div class="boxcontainer">
+							<div class="box six">
+								Boxes in boxes...
+							</div>
+							<div class="box six">
+								...in boxes in boxes...
+							</div>
+						</div>
+					</div>
+					
+					<div class="box four">
+						<h2 class="nomargin size-3">BOX</h2>
+					</div>
+				</div>
+			</div>
+			
+			<h3 class="aligncenter size-2">
+				Forced no wrapping or shrinking
+			</h3>
+			
+			<pre><code>
+				&lt;div class="boxcontainer flex-nowrap"&gt;
+					&lt;div class="box four flex-noshrink"&gt;
+						Hey, where are you going?
+					&lt;/div&gt;
+					
+					&lt;div class="box twelve flex-noshrink"&gt;
+						NOTHING CAN CONTAIN ME I AM A FREE SPIRIT I FLY WITH THE WIND AND THE TREES ARE LIKE MY ROOM-MATES
+					&lt;/div&gt;
+				&lt;/div&gt;
+			</code></pre>
+			
+			<p>Results in:</p>
+			
+			<div class="example-wrapper">
+				<div class="boxcontainer flex-nowrap">
+					<div class="box four flex-noshrink">
+						Hey, where are you going?
+					</div>
+					
+					<div class="box twelve flex-noshrink spotcolorbg">
+						NOTHING CAN CONTAIN ME I AM A FREE SPIRIT I FLY WITH THE WIND AND THE TREES ARE LIKE MY ROOM-MATES
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div id="classes" class="wrapper">
+			
+			<h3 class="size-2">Classes</h3>
+			
+			<p>
+				This is not an exhaustive list of <em>all</em> classes, as you get most of it from the CSS itself, but a decent indication of what's possible with ResponsiFlex.
+			</p>
+			
+			<h2 class="nomargin size-2">The Container</h2>
+			
+			<ul class="parameter-list">
+				<li>
+					<code class="inline">.boxcontainer</code>: The Flexbox column wrapper. All columns should go within here.
+				</li>
+				
+				<li>
+					<code class="inline">.boxcontainer.columns</code>: By default, boxcontainer will order its children left-to-right. Adding <code class="inline">.columns</code> 
+					will stack it's children top-to-bottom instead.
+				</li>
+				
+				<li>
+					<code class="inline">.boxcontainer.align[center/right]</code>: By default child boxes will be left-aligned. Adding <code class="inline">.align[center/right]</code> will change that. 
+					<strong>Note</strong> the difference between <code class="inline">.aligncenter</code> and <code class="inline">.alignmiddle</code> (below).
+				</li>
+				
+				<li>
+					<code class="inline">.boxcontainer.justify</code>: This will attempt to evenly distribute your child boxes across their container. Note that this only takes effect for any rows where there is 
+					space between the boxes to justify them.
+				</li>
+				
+				<li>
+					<code class="inline">.boxcontainer.align[top/middle/bottom]</code>: By default child boxes will be top-aligned. Adding <code class="inline">.align[top/middle/bottom]</code> will change that. 
+					<strong>Note</strong> the difference between <code class="inline">.alignmiddle</code> and <code class="inline">.aligncenter</code> (above).
+				</li>
+				
+				<li>
+					<code class="inline">.boxcontainer.stretchheight</code>: This will attempt to force all of its children to be the same height, regardless if whether any are shorter than the others. Works best 
+					for single rows of items.
+				</li>
+				
+				<li>
+					<code class="inline">.flex-nowrap</code>: By default, the boxcontainer is set to wrap its child items. Using this in combination with <code class="inline">.flex-noshrink</code> (see Child Boxes section) 
+					can force flexbox items to break out of their containers. Handy for things like slideshows &amp; carousels.
+				</li>
+				
+				<li>
+					<code class="inline">.boxcontainer.nogutter</code>: By default there is a set gutter between each box (and the boxcontainer has a negative margin to account for that). <code class="inline">.nogutter</code> 
+					Removs any margins so all direct child items butt up to each other.
+				</li>
+				
+				<li>
+					<code class="inline">.boxcontainer.mobileretainwidths</code>: ResponsiFlex has a media query to set all child boxes to 100% width when the viewport is less than 48em (assumed 768px) wide. Using 
+					<code class="inline">.mobileretainwidths</code> will mean that child boxes will retain their responsive percentage widths even on narrow viewports (Note that you can change this media query condition 
+					yourself within the CSS if you want to change it).
+				</li>
+				
+				<li>
+					<code class="inline">.mobile-boxcontainer</code>: This is for a boxcontainer that will ONLY do its thing when the viewport is less than 48em wide (see above). Sometimes you might want your display elements 
+					to behave as normal in desktop view, but get some funky alignment going on in mobile - that's what this is for.
+				</li>
+			</ul>
+			
+			<h2 class="nomargin size-2">The Child Boxes</h2>
+			
+			<ul class="parameter-list">
+				<li>
+					<code class="inline">.box</code>: A child of <code class="inline">.boxcontainer</code>. A <code class="inline">.box</code> can be a set width (<code class="inline">.one, .two, .three</code> 
+					etc. up to <code class="inline">.twelve</code>) or given no defined width, in which case it will adjust according to its content.
+				</li>
+				
+				<li>
+					<code class="inline">.box.[tenths/fifths]</code>: A twelve-grid layout is neat and pretty much standard, but every so often you might want something that's exactly a fifth of the width, or even a tenth; 
+					In that case, <code class="inline">.box.fifths</code> or <code class="inline">.box.tenths</code> will give you perfect 20% or 10%-width boxes.
+				</li>
+				
+				<li>
+					<code class="inline">.flex-grow</code>: If you don't know exactly how much space there's going to be left in your container, but you want to take up whatever's left, then this is the class for you.
+				</li>
+				
+				<li>
+					<code class="inline">.flex-stretch</code>: Pretty much as above; the main difference is that <code class="inline">.flex-glow</code> specifically sets the <code class="inline">flex-grow</code> CSS property, 
+					<code class="inline">.flex-stretch</code> sets the flex shorthand <code class="inline">flex: 1</code>. Read more about it <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">here</a>.
+				</li>
+				
+				<li>
+					<code class="inline">.flex-noshrink</code>: Flexbox will try to be as accomodating as possible with your boxes. Using this will force boxes to never shrink below their defined width. Handy when used in conjunction with 
+					<code class="inline">.flex-nowrap</code> (see above in The Container).
+				</li>
+				
+				<li>
+					<code class="inline">.flex-self-[top/middle/bottom]</code>: You can align any child item to the top, middle or bottom of its container independent of the alignment of the other items or the parent.
+				</li>
+				
+				<li>
+					<code class="inline">.box.mobile-width.mobile-[*]</code>: You can define how a box spans its container specifically on narrow viewports using the <code class="inline">.mobile-width</code> class. For example, if you have 
+					four <code class="inline">.box.three</code> elements in a row, but instead of them all expanding to 100% on a narrow viewport, you want them to switch to 50% width (so you get a 2x2 grid), you can define them as 
+					<code class="inline">&lt;div class="box three mobile-width mobile-box-six"&gt;</code>.
+				</li>
+			</ul>
+			
+		</div>
+		
+		<div id="notes" class="wrapper">
+			
+			<hr />
+			
+			<h1 class="aligncenter size-3125">
+				Notes
+			</h1>
+			
+			<p>
+				As with all things in life, there are some caveats and things to note with <strong>ResponsiFlex</strong>:
+			</p>
+			
+			<ul class="parameter-list">
+				<li>
+					The gutters are hard-coded in the CSS at 1.250rem (or 20px, assuming a root EM of 16px). If you want a different gutter, just search &amp; replace <code class="inline">1.250rem</code> in the CSS - it won't 
+					affect anything else. Could you convert it to SASS or LESS? Sure! Am I gonna? Nope!
+				</li>
+				
+				<li>
+					To account for the gutter spacing, the default <code class="inline">.boxcontainer</code> class has a negative margin. This shouldn't have any impact on any of your layout, and the negative margin is not in place 
+					when a boxcontainer is justified or has no gutter.
+				</li>
+				
+				<li>
+					To make sure everything works as expected (with the above point especially), boxcontainers and their children all have <code class="inline">box-sizing:	border-box;</code> set.
+				</li>
+				
+				<li>
+					The 'mobile' media queries kick in at a width of 48em (768px assuming a room EM of 16px). If you want to change this, you can go right ahead and modify the CSS to suit your needs.
+				</li>
+				
+				<li>
+					The classes have been written to try and keep their CSS specificity as low as possible so that they can be easily overwritten, but obviously the more complex the rule (e.g. <code class="inline">.mobile-boxcontainer > .mobile-box.nine,
+					.boxcontainer > .box.mobile-width.mobile-nine)</code>, the more specific you might need to be to override it.
+				</li>
+			</ul>
+			
+		</div>
+		
+		<div class="wrapper nudgebottom-2500 aligncenter relative">
+			
+			<a class="button download-button spotcolorbg greybghover size-2" href="https://github.com/indextwo/responsiflex/archive/master.zip" data-button-location="bottom" aria-label="Download ResponsiFlex on GitHub">Download ResponsiFlex</a>
+			
+		</div>
+		
+	</div>
+	
+	<div id="footer" class="size-0875 greybg">
+		<div class="wrapper nobottommargin">
+			<div class="boxcontainer justify">
+				<div class="box">
+					&copy; 2018 indextwo / Lawrie Malen
+				</div>
+				
+				<div class="box">
+					Developed by <a href="http://www.verynewmedia.com/" class="spotcolorhover" target="_blank">Very New Media&trade; <span class="icon- size-1 alignmiddle">vnm</span></a>
+				</div>
+		</div>
+	</div>
+	
+</body>
+</html>
