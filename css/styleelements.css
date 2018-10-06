@@ -210,15 +210,18 @@
 	float:									right;
 }
 
-.alignleft {
+.alignleft,
+.textalignleft {
 	text-align:								left;
 }
 
-.alignright {
+.alignright,
+.textalignright {
 	text-align:								right;
 }
 
-.aligncenter {
+.aligncenter,
+.textaligncenter {
 	text-align:								center;
 }
 

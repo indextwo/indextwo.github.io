@@ -72,7 +72,7 @@
 	-ms-flex-align:						start;
 	align-items:							flex-start;
 
-	margin-left:							-1.875rem;
+	margin-left:							-1.250rem;
 }
 
 .boxcontainer > * {
@@ -80,10 +80,7 @@
 }
 
 .boxcontainer > .box:not(.nomargin) {
-	/*margin-top:								0;
-	margin-right:							0;
-	margin-bottom:							0;*/
-	margin-left:							1.875rem;
+	margin-left:							1.250rem;
 }
 
 .boxcontainer > .box.noleftmargin {
@@ -152,47 +149,55 @@
 */
 
 .box.one {
-	width:									calc(8.3333% - 1.875rem);
+	width:									calc(8.3333% - 1.250rem);
+}
+
+.box.tenths {
+	width:									calc(10% - 1.250rem);
 }
 
 .box.two {
-	width:									calc(16.6667% - 1.875rem);
+	width:									calc(16.6667% - 1.250rem);
+}
+
+.box.fifths {
+	width:									calc(20% - 1.250rem);
 }
 
 .box.three {
-	width:									calc(25% - 1.875rem);
+	width:									calc(25% - 1.250rem);
 }
 
 .box.four {
-	width:									calc(33.3333% - 1.875rem);
+	width:									calc(33.3333% - 1.250rem);
 }
 
 .box.five {
-	width:									calc(41.3337% - 1.875rem);
+	width:									calc(41.3337% - 1.250rem);
 }
 
 .box.six {
-	width:									calc(50% - 1.875rem);
+	width:									calc(50% - 1.250rem);
 }
 
 .box.seven {
-	width:									calc(58.3333% - 1.875rem);
+	width:									calc(58.3333% - 1.250rem);
 }
 
 .box.eight {
-	width:									calc(66.6667% - 1.875rem);
+	width:									calc(66.6667% - 1.250rem);
 }
 
 .box.nine {
-	width:									calc(75% - 1.875rem);
+	width:									calc(75% - 1.250rem);
 }
 
 .box.ten {
-	width:									calc(83.3333% - 1.875rem);
+	width:									calc(83.3333% - 1.250rem);
 }
 
 .box.eleven {
-	width:									calc(91.6667% - 1.875rem);
+	width:									calc(91.6667% - 1.250rem);
 }
 
 .box.twelve {
@@ -237,10 +242,21 @@
 	flex-wrap:								nowrap;
 }
 
-.flex-bottom {
-	-webkit-align-self:					flex-end;
+.flex-self-top {
+	-ms-flex-item-align:					start;
+	-webkit-align-self:					flex-start;
+	align-self:								flex-start;
+}
+
+.flex-self-bottom {
 	-ms-flex-item-align:					end;
+	-webkit-align-self:					flex-end;
 	align-self:								flex-end;
+}
+
+.flex-self-middle {
+	-ms-flex-item-align:					center;
+	align-self:								center;
 }
 
 /*
@@ -277,8 +293,16 @@
 	width:									8.3333%;
 }
 
+.nogutter > .box.tenths {
+	width:									10%;
+}
+
 .nogutter > .box.two {
 	width:									16.6667%;
+}
+
+.nogutter > .box.fifths {
+	width:									20%;
 }
 
 .nogutter > .box.three {
@@ -320,85 +344,146 @@
 /*  GO FULL WIDTH AT LESS THAN 767 PIXELS */
 
 @media only screen and (max-width: 48em) {
-	.boxcontainer, 
-	.boxcontainer:not(.mobileretainwidths) > .box.one, 
-	.boxcontainer:not(.mobileretainwidths) > .box.two, 
-	.boxcontainer:not(.mobileretainwidths) > .box.three, 
-	.boxcontainer:not(.mobileretainwidths) > .box.four, 
-	.boxcontainer:not(.mobileretainwidths) > .box.five, 
-	.boxcontainer:not(.mobileretainwidths) > .box.six, 
-	.boxcontainer:not(.mobileretainwidths) > .box.seven, 
-	.boxcontainer:not(.mobileretainwidths) > .box.eight, 
-	.boxcontainer:not(.mobileretainwidths) > .box.nine, 
-	.boxcontainer:not(.mobileretainwidths) > .box.ten, 
-	.boxcontainer:not(.mobileretainwidths) > .box.eleven, 
-	.boxcontainer:not(.mobileretainwidths) > .box.twelve {
-		width:									100%;
-	}
+
+/*
+	MOBILE-ONLY BOXCONTAINER
+*/
+
+.mobile-boxcontainer {
+	min-width:								100%;
+	display:									-webkit-box;
+	display:									-ms-flexbox;
+	display:									-webkit-flex;
+	display:									flex;
 	
-	.boxcontainer:not(.retainmargins):not(.mobile-boxcontainer),
-	.boxcontainer:not(.retainmargins) > .box {
-		margin-left:							0;
-		margin-right:							0;
-	}
+	-webkit-box-orient:					horizontal;
+	-webkit-box-direction:				normal;
+	-webkit-flex-direction:				row;
+	-ms-flex-direction:					row;
+	flex-direction:						row;
+	
+	-webkit-flex-wrap:					wrap;
+	-ms-flex-wrap:							wrap;
+	flex-wrap:								wrap;
+	
+	-webkit-box-pack:						start;
+	-webkit-justify-content:			flex-start;
+	-ms-flex-pack:							start;
+	justify-content:						flex-start;
+	
+	-webkit-align-content:				flex-start;
+	-ms-flex-line-pack:					start;
+	align-content:							flex-start;
+	
+	-webkit-box-align:					start;
+	-webkit-align-items:					flex-start;
+	-ms-flex-align:						start;
+	align-items:							flex-start;
+}
 
-	.boxcontainer.mobile-boxcontainer {
-		width:									calc(100% + 1.875rem);
-	}
+/*
+	REGULAR BOXCONTAINER (make everything full-width)
+*/
 
-	.boxcontainer.mobile-boxcontainer:not(.justify) > .box.mobile-width {
-		margin-left:							1.875rem;
-	}
+.boxcontainer, 
+.boxcontainer:not(.mobileretainwidths) > .box.one, 
+.boxcontainer:not(.mobileretainwidths) > .box.tenths, 
+.boxcontainer:not(.mobileretainwidths) > .box.two, 
+.boxcontainer:not(.mobileretainwidths) > .box.fifths, 
+.boxcontainer:not(.mobileretainwidths) > .box.three, 
+.boxcontainer:not(.mobileretainwidths) > .box.four, 
+.boxcontainer:not(.mobileretainwidths) > .box.five, 
+.boxcontainer:not(.mobileretainwidths) > .box.six, 
+.boxcontainer:not(.mobileretainwidths) > .box.seven, 
+.boxcontainer:not(.mobileretainwidths) > .box.eight, 
+.boxcontainer:not(.mobileretainwidths) > .box.nine, 
+.boxcontainer:not(.mobileretainwidths) > .box.ten, 
+.boxcontainer:not(.mobileretainwidths) > .box.eleven, 
+.boxcontainer:not(.mobileretainwidths) > .box.twelve {
+	width:									100%;
+}
 
-	.boxcontainer > .box.mobile-width.mobile-one {
-		width:									calc(8.3333% - 1.875rem);
-	}
+.boxcontainer:not(.retainmargins):not(.mobile-boxcontainer),
+.boxcontainer:not(.retainmargins) > .box {
+	margin-left:							0;
+	margin-right:							0;
+}
 
-	.boxcontainer > .box.mobile-width.mobile-two {
-		width:									calc(16.6667% - 1.875rem);
-	}
+.boxcontainer.mobile-boxcontainer:not(.justify) > .box.mobile-width {
+	margin-left:							1.250rem;
+}
 
-	.boxcontainer > .box.mobile-width.mobile-three {
-		width:									calc(25% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.one,
+.boxcontainer > .box.mobile-width.mobile-one {
+	width:									calc(8.3333% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-four {
-		width:									calc(33.3333% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.tenths,
+.boxcontainer > .box.mobile-width.mobile-tenths {
+	width:									calc(16.6667% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-five {
-		width:									calc(41.3337% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.two,
+.boxcontainer > .box.mobile-width.mobile-two {
+	width:									calc(16.6667% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-six {
-		width:									calc(50% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.fifths,
+.boxcontainer > .box.mobile-width.mobile-fifths {
+	width:									calc(25% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-seven {
-		width:									calc(58.3333% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.three,
+.boxcontainer > .box.mobile-width.mobile-three {
+	width:									calc(25% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-eight {
-		width:									calc(66.6667% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.four,
+.boxcontainer > .box.mobile-width.mobile-four {
+	width:									calc(33.3333% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-nine {
-		width:									calc(75% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.five,
+.boxcontainer > .box.mobile-width.mobile-five {
+	width:									calc(41.3337% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-ten {
-		width:									calc(83.3333% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.six,
+.boxcontainer > .box.mobile-width.mobile-six {
+	width:									calc(50% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobile-width.mobile-eleven {
-		width:									calc(91.6667% - 1.875rem);
-	}
+.mobile-boxcontainer > .mobile-box.seven,
+.boxcontainer > .box.mobile-width.mobile-seven {
+	width:									calc(58.3333% - 1.250rem);
+}
 
-	.boxcontainer > .box.mobilefullwidth {
-		width:									100%;
-	}
+.mobile-boxcontainer > .mobile-box.eight,
+.boxcontainer > .box.mobile-width.mobile-eight {
+	width:									calc(66.6667% - 1.250rem);
+}
 
-	.box img {
-		width:								100%;
-	}
+.mobile-boxcontainer > .mobile-box.nine,
+.boxcontainer > .box.mobile-width.mobile-nine {
+	width:									calc(75% - 1.250rem);
+}
+
+.mobile-boxcontainer > .mobile-box.ten,
+.boxcontainer > .box.mobile-width.mobile-ten {
+	width:									calc(83.3333% - 1.250rem);
+}
+
+.mobile-boxcontainer > .mobile-box.eleven,
+.boxcontainer > .box.mobile-width.mobile-eleven {
+	width:									calc(91.6667% - 1.250rem);
+}
+
+.boxcontainer > .box.mobilefullwidth {
+	width:									100%;
+}
+
+.box img:not([width="0"]) {
+	width:								100%;
+}
+
 }
